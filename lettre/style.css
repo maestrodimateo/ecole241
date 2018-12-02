@@ -15,7 +15,7 @@ a{
     color: cornflowerblue;
 }
 a:hover{
-    color: red;
+    color: blue;
 }
 address{
     margin: 0 0 60px;

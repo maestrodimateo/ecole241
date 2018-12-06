@@ -1,0 +1,93 @@
+*{box-sizing: content-box;}
+body{margin: 0;font-family: 'Montserrat', sans-serif;}
+
+/* Le logo */
+@font-face {
+ font-family: "Motion Picture";
+ src: url(../fonts/MotionPicture_PersonalUseOnly.ttf);
+}
+
+
+/* le logo */
+.logo{
+    font-family: "Motion Picture", serif;
+    text-align: center;
+    font-size: 4em;
+    font-weight: lighter;
+    margin: 0 auto;
+}
+.logo-grey{color:#707070;}
+.logo-green{color: #08B597;}
+
+/*banniere*/
+.ban{
+    display: block; 
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+
+hr{ opacity: 0.2;}
+hr + nav{margin: 20px 0;}
+hr + nav a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #8b8b8b;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.info-ban{color: white;}
+.flex{display: flex;}
+.flex-around{justify-content: space-between}
+.btn{
+    font-variant: small-caps;
+    padding: 5px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #08B597;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.date{font-size: 10px;font-weight: bold}
+
+/*Les grands titres*/
+.big-title{font-family:'Merriweather', serif;margin-bottom: 0;}
+h5.big-title{font-family:'Merriweather', serif;margin-bottom: 0;font-size: 12px;width: 170px;}
+h1.big-title {width: 750px;font-size: 36px;font-weight: bold}
+h1.big-title + .date{margin-bottom: 70px;}
+
+/* les arrieres-plan */
+.bg-green{background-color: #08B597;color: white;}
+.bg-grey{background-color: #f9f9f9;}
+
+.parent-ref{position: relative;}
+.abs-right{position: absolute;right: 0}
+.abs-center{position: absolute;top: 60%;left: 50%; transform: translateX(-50%) translateY(-50%);}
+.d-inline-block{display: inline-block}
+.abs-top{position: absolute;top: 0}
+.pad-x-10{padding-right:10px;padding-left:10px;}
+.abs-bottom{position: absolute;bottom: 10px;}
+
+
+/* les liens */
+.small-img{width: 90%;border: solid rgb(12, 12, 12) 1px; margin-right:20px;}
+header nav > a{
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-right: 15px;
+}
+/*icons*/
+.fab{margin-right: 5px;}
+
+/*bloc principal*/
+.container{width: 900px;margin: auto}
+header{padding: 10px 0;}
+header > div nav{display: inline-block;}
+.search-link{margin-left: 20px;}

@@ -42,16 +42,12 @@ hr + nav a{
 .flex{display: flex;}
 .flex-around{justify-content: space-between}
 .btn{
-    font-variant: small-caps;
-    padding: 5px;
-    display: inline-block;
-    width: 80px;
-    text-align: center;
-    border-radius: 25px;
-    background-color: #08B597;
+    padding: 7px 20px;
+    border-radius: 18px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-variant: small-caps;
+    background-color: #08B597;
 }
 .date{font-size: 10px;font-weight: bold}
 

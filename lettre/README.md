@@ -5,6 +5,6 @@
 Voici du code : 
 ```css
 .position {
-        border-style:solid;
+    border-style:solid;
 }
 ```

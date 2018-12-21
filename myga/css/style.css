@@ -1,43 +1,85 @@
-body{ margin: 0;}
-header{
-    background-color:white;
+*{
+    font-family: 'Julius Sans One', sans-serif;
 }
-header > div.container:first-child{
-    padding: 10px 0 0 0;
+body{
+    margin: 0;
+}
+header{
+    background-color: white;
 }
 .container{
     width: 900px;
     margin: 0 auto;
 }
-.main-menu{
-    padding-top:30px; 
-    float: right;
-}
-.main-menu a{
-    margin-right:10px; 
-}
 
-.btn{
+nav, nav li{
+    display: inline-block;
+}
+ul {
+    list-style: none;
+    padding-left:0;
+}
+a:not(.logo){
     text-decoration: none;
+    color: rgb(24, 23, 23);
+    padding:33px 15px;
+}
+nav li a:hover{
     background-color: #2ed573;
-    padding: 10px 10px;
     color: white;
-    border-radius: 5px;
+}
+.active{
+    background-color: #2ed573;
+    color: white;
+}
+nav img{width: 30px;}
+section:first-of-type {
+    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(../img/lbv1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:first-of-type h1{
+    text-align: center;
+    color: white;
+}
+input[type="text"]{
+    border: none;
+    width: 500px;
+    font-size: 20px;
+    padding: 10px;
+}
+label{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+.btn{
+    display: block;
+    margin: 20px auto;
+    background-color:white;
+    border-style: none;
+    padding: 20px 50px;
     font-weight: bold;
-    box-shadow: 2px 2px 5px rgb(68, 65, 65);
-    font-size: 13px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .btn:hover{
-    box-shadow: 1px 1px 3px rgb(68, 65, 65);
+    background-color: #3742fa;
+    color: white;
 }
 
-/* la partie principale de la page */
-main{
-    position: relative;
-    height: 80vh;
-    background: linear-gradient(rgba(151, 145, 145, 0.50),  rgba(0, 0, 0, 0.50)),
-    url("../img/gabon_paysage.jpg");
-    background-size:cover;
-    background-repeat:no-repeat;
+
+/* le footer */
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    background-color: #ffffff;
+    background-color: #3742fa;
+    color: white;
+    padding: 10px;
 }

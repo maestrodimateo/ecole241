@@ -5,26 +5,71 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
         <title>My.ga</title>
     </head>
     <body>
-        <!-- le menu principal de la page -->
         <header>
-
-            <div class="container">
-                <a href="#">
-                    <img src="img/myga.png" alt="logo de myga">
+            <div class="container flex">
+                <a href="#" class="logo">
+                    <img src="img/myga.png" alt="le logo de myga">
                 </a>
-                <div  class="main-menu">
-                    <a href="#" class="btn">Admin login <i class="fas fa-user"></i></a>
-                    <span class="lang">Langues</span>
-                    <!-- menu deroulant -->
-                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Connexion</a></li>
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#" >EN</a></li>
+                        <li><a href="#" class="active">FR</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
-        <main>
-        </main>
+        <section>
+            <div>
+                <h1>Enregistrez votre nom de domaine</h1>
+                <form action="#">
+                    <input type="text" id="domaine" placeholder="Entrez votre nom de domaine">
+                    <label for="domaine">.GA</label>
+                    <input type="submit" class="btn" value="Créer">
+                </form>
+            </div>
+        </section>
+        <section>
+            <!-- <img src="#" alt="rien a dire" srcset="">
+            <img src="#" alt="rien a dire" srcset="">
+            <img src="#" alt="rien a dire" srcset="">
+            <img src="#" alt="rien a dire" srcset=""> -->
+        </section>
+        <footer>
+            <div class="container">
+                <div class="flex">
+                    <div>
+                        <p>My ga</p>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Who-Is</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Société</p>
+                        <ul>
+                            <li><a href="#">Politiques</a></li>
+                            <li><a href="#">Bureaux d'enregistrement</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Assistance</p>
+                        <ul>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

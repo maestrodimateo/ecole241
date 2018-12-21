@@ -19,20 +19,19 @@ ul {
     list-style: none;
     padding-left:0;
 }
-a:not(.logo){
+nav a:not(.logo){padding:16px;}
+nav a:not(.logo), footer a{
     text-decoration: none;
     color: rgb(24, 23, 23);
-    padding:33px 15px;
 }
-nav li a:hover{
+footer a{
+    color: white;
+}
+nav li a:hover, .active{
     background-color: #2ed573;
     color: white;
 }
-.active{
-    background-color: #2ed573;
-    color: white;
-}
-nav img{width: 30px;}
+.logo img{width: 60px;}
 section:first-of-type {
     background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(../img/lbv1.jpg);
     background-repeat: no-repeat;
@@ -66,7 +65,7 @@ label{
     font-weight: bold;
 }
 .btn:hover{
-    background-color: #3742fa;
+    background-color: #0fb855;
     color: white;
 }
 
@@ -79,7 +78,7 @@ label{
 }
 footer{
     background-color: #ffffff;
-    background-color: #3742fa;
+    background-color: #0fb855;
     color: white;
     padding: 10px;
 }

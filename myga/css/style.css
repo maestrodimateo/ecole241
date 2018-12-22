@@ -1,20 +1,13 @@
 *{
     font-family: 'Julius Sans One', sans-serif;
 }
-body{
-    margin: 0;
-}
-header{
-    background-color: white;
-}
+body{margin: 0;}
 .container{
     width: 900px;
     margin: 0 auto;
 }
 
-nav, nav li{
-    display: inline-block;
-}
+nav, nav li{display: inline-block;}
 ul {
     list-style: none;
     padding-left:0;
@@ -33,7 +26,7 @@ nav li a:hover, .active{
 }
 .logo img{width: 60px;}
 section:first-of-type {
-    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(../img/lbv1.jpg);
+    background-image: linear-gradient(rgba(30, 30, 31, 0.45),rgba(0,0,0,0.45)),url(../img/gabon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
@@ -79,6 +72,16 @@ label{
 footer{
     background-color: #ffffff;
     background-color: #0fb855;
-    color: white;
+    color: rgb(110, 110, 155);
     padding: 10px;
 }
+footer p{
+    color: rgb(215, 215, 219);
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom:  1px solid white;
+}
+footer li{
+    padding-top: 10px;
+}
+footer a:hover{color: #dcdde1;}

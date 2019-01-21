@@ -197,6 +197,15 @@ footer{
     position: relative;
     margin-top: 100px;
 }
+.btn-top{
+    background-color: #2DA7E2;
+    padding: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 .flex{
     display: flex;
     margin: auto;

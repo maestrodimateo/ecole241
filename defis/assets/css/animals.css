@@ -198,8 +198,12 @@ footer{
     margin-top: 100px;
 }
 .btn-top{
+    color: white;
     background-color: #2DA7E2;
-    padding: 25px;
+    padding: 16px 20px;
+    position: absolute;
+    top: -20px;
+    right: 60px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -217,7 +221,13 @@ footer{
 .flex div:last-child{
     width: 267px;
 }
-
+footer h5{
+    font-variant: small-caps;
+    padding-bottom: 10px;
+    border-bottom: solid 2px;
+    font-size: 25px
+    ;
+}
 .social-icon{
     padding: 15px;
     color: #C3CCD3;

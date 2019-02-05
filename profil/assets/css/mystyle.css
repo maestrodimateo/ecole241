@@ -1,4 +1,5 @@
 *{color: white;}
+html{scroll-behavior: smooth;}
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -13,12 +14,15 @@ h1, h2, h3{text-transform: uppercase;}
 .mt-0{margin-top: 0;}
 .mt-30{margin-top: 30px;}
 .mb-100{margin-bottom:100px;}
+.mb-50{margin-bottom:50px;}
+.mb-20{margin-bottom:20px;}
 .d-inline-block{display: inline-block;}
 .bg-indigo{background-color: #516ABC;}
 .bg-orange{background-color: #FF9900;}
 .bg-pink{background-color: #FD225F;}
 .d-block{display: block;}
 .pt-100{padding-top: 100px;}
+.pb-10{padding-bottom: 10px;}
 .pl-0{padding-left:0; }
 .pl-50{padding-left: 50px;}
 .pr-50{padding-right: 50px;}
@@ -31,11 +35,14 @@ h1, h2, h3{text-transform: uppercase;}
 .font-bold{font-weight: bold;}
 .text-uppercase{text-transform: uppercase;}
 .text-none{text-transform: none;}
-
+.form-control{border-style:none;border-bottom: solid 1px #fff; background-color: transparent;width: 100%;padding:0 10px 20px; }
+.form-control::placeholder{color:white;font-family: 'Montserrat', sans-serif;font-size: 1.1em; }
+.form-control:focus{outline: none;}
 .hr-middle{ height: 3px;background-color: #fff;width: 50px;border-style: none;}
 .hr-left{ height: 1px;background-color: #fff;width: 50px;border-style: none;margin-left: 0;}
-
-
+.hr-bold{ height: 3px;background-color: #fff;width: 70px;border-style: none;margin-left: 0;}
+.btn-white{display:block;color: #516ABC;background-color: #fff;border:none;width:100%;padding: 15px 10px;font-size: 1.3em;cursor: pointer;}
+#mapid{border: solid 10px #fff;}
 /* le header */
 header{
     position: relative;
@@ -93,6 +100,7 @@ header{
     margin: 20px 0 30px;
     font-size: 1em;
 }
+
 .btn{
     font-size: 1.13em;
     text-transform: uppercase;
@@ -107,6 +115,7 @@ header{
 
 /* fleche du bas */
 a[href="#personal"]{
+    scroll-behavior: smooth;
     background-color: #FF9900;
     position: absolute;
     right: 0;
@@ -236,4 +245,8 @@ section p{
     right: 0;
     background-color:rgb(16, 13, 67, 0.9);
     line-height: 300px;
+}
+#form-map{
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 2%;
 }

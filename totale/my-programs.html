@@ -85,7 +85,8 @@
                     <div>recharge de 30 000 FCFA<a href="#!" class="secondary-content text-blue-total">Le 11/07/2018</a></div>
                 </li>
             </ul>
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light modal-trigger red"  href="#modal1"><i class="material-icons">add</i></a>
+
         </div>
         <!--Fin Partie du solde-->
 
@@ -97,11 +98,15 @@
             <div class="modal-content" style="padding:5px;">
                 <div class="row">
                     <div class="col-12">
-                        <form action="https://ref-dev.alwaysdata.net/total/paiement.php" method="post">
-                            <input type="number" min="500" name="montant" id="test" placeholder="francs CFA">
+                        <form action="https://ref-dev.alwaysdata.net/total/paiement.php" id="logup" method="post">
+                            <input type="number" min="500" name="prix" id="test" required placeholder="francs CFA">
+                            <div class="step-actions">
+                                <input type="text" name="lieu" hidden value = "recharge" style="display:none;">
+                                <input type="text" name="type" hidden value = "rien a dire" style="display:none;">
+                                <input type="tel" name="tel" hidden value = "mon num" style="display:none;">
                             <div class="step-actions">
                                 <!-- Here goes your actions buttons -->
-                                <input type="submit" name="charge" value="Charger" class="btn-large btn-large-blue">
+                                <input type="submit" name="charge" value="Charger" class="btn-large btn-large-red">
                             </div>
                         </form>
                     </div>
@@ -831,8 +836,6 @@
                 </li>
             </ul>
         </div>
-
-
 
         <!-- Modal Structure 1  -->
         <div id="modal1" class="modal">

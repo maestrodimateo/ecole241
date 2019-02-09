@@ -99,11 +99,10 @@
                 <div class="row">
                     <div class="col-12">
                         <form action="https://ref-dev.alwaysdata.net/total/paiement.php" method="post">
-                            <input type="number" min="500" id="test" placeholder="francs CFA">
+                            <input type="number" min="500" name="montant" id="test" placeholder="francs CFA">
                             <div class="step-actions">
                                 <!-- Here goes your actions buttons -->
-                                <a href="#"
-                                    class="waves-effect btn-large btn-large-blue next-step text-bold bg-warning-agri">Charger</a>
+                                <input type="submit" name="charge" value="Charger" class="btn-large btn-large-blue">
                             </div>
                         </form>
                     </div>
@@ -1150,6 +1149,27 @@
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // recuperation du formulaire
+        let form = $("#logup");
+        $(form).on('submit', function (e) {
+            e.preventDefault();
+            let data = $(this).serialize();
+            console.log(data);
+            let url = $(this).attr("action");
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: data,
+                dataType: 'json',
+                success: function (response) {
+                    let billId = response.e_bill.bill_id;
+                    $('#invoice_number').val(billId);
+                    document.frm.submit();
+                }
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 

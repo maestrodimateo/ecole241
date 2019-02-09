@@ -74,7 +74,6 @@ header{
 }
 .logo{
     float: right;
-    margin: 10px;
 }
 /* le contenu du bg-inner */
 .bg-inner{
@@ -234,9 +233,8 @@ section p{
     height: 300px;
     object-fit: cover;
 }
-.box{
-    position: relative;
-}
+.box{position: relative;}
+.box img{outline: solid 10px #fff;}
 .content{
     position: absolute;
     width: 100%;
@@ -248,5 +246,6 @@ section p{
 }
 #form-map{
     grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr;
     grid-column-gap: 2%;
 }

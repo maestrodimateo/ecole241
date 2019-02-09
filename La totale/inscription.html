@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Total Samba</title>
+</head>
+
+<body style="background:white !important;">
+
+    <div class="container min-vh-100">
+
+        <div class="row">
+            <div class="col s12 mt-10">
+                <p class="center-align">
+                    <img src="images/logototal.png" class="w-100" alt="logo">
+                </p>
+                <div class="row">
+                    <div class="col s12">
+                        <form action="https://ref-dev.alwaysdata.net/total/paiement.php" id="logup" method="post">
+                            <select name="type">
+                                <option value="" disabled selected>Choisir le type de carte</option>
+                                <option value="2">Toutes Options : Carburants, Lavage & Boutique</option>
+                                <option value="3">Option : Carburants</option>
+                            </select>
+                            <select class="mt-10" name="prix">
+                                <option value="" disabled selected>Votre Montant</option>
+                                <option value="1">5000</option>
+                                <option value="1">15000</option>
+                                <option value="1">35000</option>
+                                <option value="1">55000</option>
+                                <option value="1">75000</option>
+                                <option value="1">150000</option>
+                            </select>
+                            <select class="mt-10" name="lieu">
+                                <option value="" disabled selected>Lieu de livraison</option>
+                                <option value="1">Station oloumi</option>
+                                <option value="2">Station Nombakélé</option>
+                                <option value="3">Station Okala</option>
+                                <option value="4">Station Boulingui bindza</option>
+                                <option value="5">Station moabi</option>
+                                <option value="6">Station Bango</option>
+                            </select>
+
+                            <!-- informations personnelles -->
+                            <div class="row">
+                                <div class="input-field input-field-reset col s6">
+                                    <input type="text" id="nom" class="validate" name="name">
+                                    <label style="font-weight: bold" for="nom" data-error="wrong"
+                                        data-success="right">Nom</label>
+                                </div>
+                                <div class="input-field input-field-reset col s6">
+                                    <input type="text" id="prenom" class="validate" name="pren">
+                                    <label style="font-weight: bold" for="prenom" data-error="wrong"
+                                        data-success="right">Prénom</label>
+                                </div>
+                                <div class="input-field input-field-reset col s12">
+                                    <input type="tel" id="phone" class="validate" name="tel">
+                                    <label style="font-weight: bold" for="phone" data-error="wrong"
+                                        data-success="right">Téléphone</label>
+                                </div>
+                                <div class="input-field input-field-reset col s12">
+                                    <input type="password" id="psd" class="validate" name="pass">
+                                    <label style="font-weight: bold" for="psd" data-error="wrong"
+                                        data-success="right"><i class="material-icons">lock</i></label>
+                                </div>
+                                <div class="input-field input-field-reset col s12">
+                                    <input type="password" id="confirm" class="validate" name="conf">
+                                    <label style="font-weight: bold" for="confirm" data-error="wrong"
+                                        data-success="right">Confirmation</label>
+                                </div>
+
+                                <input type="submit" value="Commander" class="btn-large btn-large-red" name="ok">
+                                <div class="text-center">
+                                    <small class="text-blue-total text-center">
+                                        En créant un compte, vous acceptez nos conditions d'utilisation.
+                                    </small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="https://sandbox.billing-easy.net" method='post' name='frm'>
+        <input type='hidden' name='invoice_number' id="invoice_number" value="">
+        <input type='hidden' name='eb_callbackurl' value="https://confirmation.html">
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        // recuperation du formulaire
+        let form = $("#logup");
+        $(form).on('submit', function (e) {
+            e.preventDefault();
+            let data = $(this).serialize();
+            let url = $(this).attr("action");
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: data,
+                dataType: 'json',
+                success: function (response) {
+                    let billId = response.e_bill.bill_id;
+                    $('#invoice_number').val(billId);
+                    document.frm.submit();
+                }
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

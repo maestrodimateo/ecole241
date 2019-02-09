@@ -24,26 +24,26 @@
                         <form action="https://ref-dev.alwaysdata.net/total/paiement.php" id="logup" method="post">
                             <select name="type">
                                 <option value="" disabled selected>Choisir le type de carte</option>
-                                <option value="2">Toutes Options : Carburants, Lavage & Boutique</option>
-                                <option value="3">Option : Carburants</option>
+                                <option value="Toutes Options : Carburants, Lavage & Boutique">Toutes Options : Carburants, Lavage & Boutique</option>
+                                <option value="Carburants">Carburants</option>
                             </select>
                             <select class="mt-10" name="prix">
                                 <option value="" disabled selected>Votre Montant</option>
-                                <option value="1">5000</option>
-                                <option value="1">15000</option>
-                                <option value="1">35000</option>
-                                <option value="1">55000</option>
-                                <option value="1">75000</option>
-                                <option value="1">150000</option>
+                                <option value="5000">5000</option>
+                                <option value="15000">15000</option>
+                                <option value="35000">35000</option>
+                                <option value="55000">55000</option>
+                                <option value="75000">75000</option>
+                                <option value="15000">150000</option>
                             </select>
                             <select class="mt-10" name="lieu">
                                 <option value="" disabled selected>Lieu de livraison</option>
-                                <option value="1">Station oloumi</option>
-                                <option value="2">Station Nombakélé</option>
-                                <option value="3">Station Okala</option>
-                                <option value="4">Station Boulingui bindza</option>
-                                <option value="5">Station moabi</option>
-                                <option value="6">Station Bango</option>
+                                <option value="Station oloumi">Station oloumi</option>
+                                <option value="Station Nombakélé">Station Nombakélé</option>
+                                <option value="Station Okala">Station Okala</option>
+                                <option value="Station Boulingui bindza">Station Boulingui bindza</option>
+                                <option value="Station moabi">Station moabi</option>
+                                <option value="Station Bango">Station Bango</option>
                             </select>
 
                             <!-- informations personnelles -->
@@ -90,7 +90,8 @@
 
     <form action="https://sandbox.billing-easy.net" method='post' name='frm'>
         <input type='hidden' name='invoice_number' id="invoice_number" value="">
-        <input type='hidden' name='eb_callbackurl' value="https://maestrodimateo.github.io/ecole241/totale/confirmation.html">
+        <input type='hidden' name='eb_callbackurl'
+            value="https://maestrodimateo.github.io/ecole241/totale/confirmation.html">
     </form>
 
 
@@ -102,6 +103,7 @@
         $(form).on('submit', function (e) {
             e.preventDefault();
             let data = $(this).serialize();
+            console.log(data);
             let url = $(this).attr("action");
             $.ajax({
                 type: 'POST',

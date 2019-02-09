@@ -4,12 +4,12 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/'
-        crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
+        integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Agri-collecte</title>
+    <title>Total Samba</title>
 </head>
 
 <body class="bg-beige-agri">
@@ -18,7 +18,7 @@
     <nav class="nav-extended">
         <div class="nav-wrapper bg-white">
             <ul class="right">
-                <li id="search-icon"><a href="#"><i class="material-icons text-green-agri">search</i></a></li>
+                <li id="search-icon"><a href="#"><i class="material-icons text-warning-agri">search</i></a></li>
             </ul>
             <form style="width: 100%; position:absolute; z-index: 1; display: none;" id="search-form">
                 <div class="input-field" id="search-div">
@@ -27,143 +27,104 @@
                     <i class="material-icons" id="close">close</i>
                 </div>
             </form>
-            <a href="#" id="logo" class="brand-logo"><img src="images/logo.png" width="130" alt=""></a>
-            <a href="#" id="menu" data-target="mobile-demo" class="sidenav-trigger text-green-agri" style="position:relative; z-index: 0;"><i
-                    class="material-icons">menu</i></a>
+            <a href="#" id="logo" class="brand-logo"><img src="images/logototalSansEcrit.png" width="80" alt=""></a>
+            <a href="#" id="menu" data-target="mobile-demo" class="sidenav-trigger text-green-agri"
+                style="position:relative; z-index: 0;"><i class="material-icons text-warning-agri">menu</i></a>
         </div>
-        <div class="nav-content bg-green-agri" style="padding:1px;">
-            <h5 class="text-center">CAMPAGNES</h5>
+        <div class="nav-content bg-red-agri" style="padding:1px;">
+            <h5 class="text-center">Mon espace</h5>
         </div>
-        <div class="nav-content bg-green-agri">
+        <div class="nav-content bg-red-agri">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="active" href="#program">créées</a></li>
-                <li class="tab"><a href="#participe">Participées</a></li>
-                <li class="tab"><a href="#publique">Publiques</a></li>
+                <li class="tab text-bold"><a class="active" href="#program">Mon solde</a></li>
+                <li class="tab text-bold"><a href="#participe">Transactions</a></li>
+                <!-- <li class="tab"><a href="#publique">Mes services</a></li> -->
             </ul>
         </div>
     </nav>
+
     <!-- end navbar -->
 
     <!-- sidebar -->
+    <!--Profil modifier-->
     <ul class="sidenav" id="mobile-demo">
         <li>
             <div class="user-view" style="font-weight: bold;">
-                <div class="background">
-                    <img src="images/10.jpg" alt="exemple">
+                <div class="background bg-red-agri">
+                    <!-- <img src="images/mlra6.jpg" alt="exemple"> -->
                 </div>
-                <a href="#user"><img class="circle" src="images/avatarh.png" alt="exemple"></a>
-                <a href="#name"><span class="white-text">FADIKPE I. Juste</span></a><br>
-                <a href="#email"><span class="white-text">Agriculteur</span></a>
+                <a href="#user"><img class="circle" src="images/mlra6.jpg" alt="Rick Axel"></a>
+                <a href="#name"><span class="white-text">Rick Axel</span></a><br>
+                <a href="#email"><span class="white-text">Conducteur Grume</span></a>
             </div>
         </li>
-        <li><a href="#"><i class='material-icons'>home</i>Accueil</a></li>
+        <li><a href="my-programs.html"><i class='material-icons'>home</i>Mon espace</a></li>
         <li><a href="#!"><i class='material-icons'>edit</i>Editer Profil</a></li>
-        <li><a href="notif.html"><i class='material-icons'>notifications</i>Notifications</a></li>
+        <li><a href="my-programs.html"><i class='material-icons'>compare_arrows</i>Transactions</a></li>
         <li><a href="#!"><i class='material-icons'>location_on</i>Libreville</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="waves-effect" href="index.html"><i class='material-icons'>info_outline</i>A propos de l'APP</a></li>
+        <li><a class="waves-effect" href="#"><i class='material-icons'>info_outline</i>A propos de l'APP</a>
+        </li>
         <li><a class="waves-effect" href="index.html"><i class='material-icons'>exit_to_app</i>Déconnexion</a></li>
     </ul>
 
     <main id="program">
-        <!-- Modal Trigger -->
-
-        <div class="row mt-20 container-fluid">
-            <div class="col s12">
-                <a href="#modal1" data-position="bottom" data-tooltip="Ajouter une campagne" class="tooltipped btn-floating btn-large bg-green-agri waves-effect waves-light modal-trigger"><i
-                        class="material-icons">add</i></a>
-            </div>
-        </div>
         <div class="row px-10">
             <ul class="card collection">
                 <li class="collection-item avatar">
-                    <img src="images/3.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Avocato --</span>
+                    <!-- <img src="images/3.jpg" alt="Fcfa" class=" materialboxed circle"> -->
+                    <span class="title text-bold">-- Mon solde en Fcfa --</span>
                     <p>
-                        <small>Créé le 25/10/2018</small><br>
-                        <small class="badge blue text-white p-5">En cours</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
-                            <a href="#modal2" class="modal-trigger"><i class="material-icons" style="color:grey;">note_add</i></a>
-                        </span>
+                        <small> le 08/02/2019</small><br>
+                        <small class="badge bg-totalYello text-white p-5">Montant rechargé :</small><br>
+                        <small>+ 50 000 Fcfa</small><br>
+                        <small class="badge bg-totalBO text-white p-5">Montant restant :</small><br>
+                        <small>+ 10 000 Fcfa</small><br>
                     </p>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="images/20.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- TomLabs --</span>
-                    <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
-                            <a href="#modal2" class="modal-trigger"><i class="material-icons" style="color:grey;">note_add</i></a>
-                        </span>
-                    </p>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/3.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Simplon-241 --</span>
-                    <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
-                            <a href="#modal2" class="modal-trigger"><i class="material-icons" style="color:grey;">note_add</i></a>
-                        </span>
-                    </p>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/3.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Campagne241 --</span>
-                    <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
-                            <a href="#modal2" class="modal-trigger"><i class="material-icons" style="color:grey;">note_add</i></a>
-                        </span>
-                    </p>
-                </li>
+                <div class="row mt-20 container-fluid btnPosition">
+                    <div class="col s12">
+                        <a href="#modal1" data-position="bottom" data-tooltip="Solder son compter"
+                            class="tooltipped btn-floating btn-large bg-red-agri waves-effect waves-light modal-trigger"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                </div>
             </ul>
         </div>
+        <!--Fin Partie du solde-->
 
 
 
         <!-- Modal Structure 1  -->
         <div id="modal1" class="modal">
-            <h5 class="text-center">Nouvelle campagne</h5>
+            <h5 class="text-center">Charger mon compte</h5>
             <div class="modal-content" style="padding:5px;">
                 <div class="row">
                     <div class="col-12">
                         <form action="#" method="post">
                             <select class="browser-default">
-                                <option value="" disabled selected>Choisissez le type</option>
-                                <option value="1">Prix</option>
-                                <option value="2">Quantité</option>
-                                <option value="3">Flux</option>
-                                <option value="2">Recensement</option>
+                                <option value="" disabled selected>Choix du montant</option>
+                                <option value="1"></option>
+                                <option value="2">10 000 Fcfa</option>
+                                <option value="3">20 000 Fcfa</option>
+                                <option value="4">25 000 Fcfa</option>
+                                <option value="5">30 000 Fcfa</option>
+                                <option value="6">35 000 Fcfa</option>
+                                <option value="7">40 000 Fcfa</option>
                             </select>
-                            <div class="input-field input-field-reset">
+                            <!-- <div class="input-field input-field-reset">
                                 <input type="text" id="pseudo" class="validate">
                                 <label for="pseudo" data-error="wrong" data-success="right">Nom</label>
                             </div>
                             <div class="input-field">
                                 <textarea id="description" class="materialize-textarea"></textarea>
                                 <label for="description">Description</label>
-                            </div>
+                            </div> -->
                             <div class="step-actions">
                                 <!-- Here goes your actions buttons -->
-                                <a href="#" class="waves-effect waves-dark btn next-step">AJOUTER</a>
+                                <a href="#" class="waves-effect btn next-step text-bold bg-warning-agri">Charger</a>
                             </div>
                         </form>
                     </div>
@@ -180,7 +141,8 @@
                     <div class="col s12" style="padding:0;">
                         <ul class="tabs">
                             <li class="tab col s3 active"><a href="#test1" style="color:#287b05">Standard</a></li>
-                            <li class="tab col s3"><a class="active" href="#test2" style="color:#287b05">Personnalisé</a></li>
+                            <li class="tab col s3"><a class="active" href="#test2"
+                                    style="color:#287b05">Personnalisé</a></li>
                         </ul>
                     </div>
                     <div id="test1" class="col s12 p-10">
@@ -247,7 +209,8 @@
                                 </div>
                                 <div class="col s12">
                                     <div class="input-field col s12">
-                                        <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Ajouter un lieu">
+                                        <input type="text" id="autocomplete-input" class="autocomplete"
+                                            placeholder="Ajouter un lieu">
                                         <label data-error="wrong" data-success="right" for="autocomplete-input"><i
                                                 class="material-icons">location_on</i></label>
                                     </div>
@@ -282,9 +245,12 @@
                 <div class="row p-0">
                     <div class="col s12">
                         <ul class="tabs">
-                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons" style="color:#287b05">info_outline</i></a></li>
-                            <li class="tab col s3"><a href="#test4"><i class="material-icons" style="color:#287b05">group</i></a></li>
-                            <li class="tab col s3"><a href="#test5"><i class="material-icons" style="color:#287b05">assignment</i></a></li>
+                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons"
+                                        style="color:#287b05">info_outline</i></a></li>
+                            <li class="tab col s3"><a href="#test4"><i class="material-icons"
+                                        style="color:#287b05">group</i></a></li>
+                            <li class="tab col s3"><a href="#test5"><i class="material-icons"
+                                        style="color:#287b05">assignment</i></a></li>
                         </ul>
                     </div>
                     <div id="test3" class="col s12">
@@ -311,7 +277,7 @@
                         <ul class="collection with-header">
                             <li class="collection-item">
                                 <div>
-                                    <img src="images/avatar.png" width="50" class="circle" alt="avatar">
+                                    <img src="images/mlra6.jpg" width="50" class="circle" alt="avatar">
                                     <span style="line-height:10px;">mebale Noel</span>
                                     <a href="#!" class="secondary-content"><i class="material-icons ">delete</i></a>
                                 </div>
@@ -484,18 +450,19 @@
 
 
     <main id="publique">
-        <div class="row mt-20 container-fluid">
-        </div>
-        <div class="row px-10">
+        <!-- <div class="row mt-20 container-fluid">
+        </div> -->
+        <!-- <div class="row px-10">
             <ul class="card collection">
                 <li class="collection-item avatar">
                     <img src="images/3.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Avocato --</span>
+                    <span class="title text-bold">-- "###########" --</span>
                     <p>
                         <small>Créé le 25/10/2018</small><br>
                         <small class="badge blue text-white p-5">En cours</small><br>
                         <span style="display: block;" class="mt-10">
                             <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
+                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">add</i></a>&nbsp;
                         </span>
                     </p>
                 </li>
@@ -533,7 +500,7 @@
                     </p>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <!-- Modal Structure 1  -->
         <div id="modal1" class="modal">
             <h5 class="text-center">Nouvelle campagne</h5>
@@ -575,7 +542,8 @@
                     <div class="col s12" style="padding:0;">
                         <ul class="tabs">
                             <li class="tab col s3 active"><a href="#test1" style="color:#287b05">Standard</a></li>
-                            <li class="tab col s3"><a class="active" href="#test2" style="color:#287b05">Personnalisé</a></li>
+                            <li class="tab col s3"><a class="active" href="#test2"
+                                    style="color:#287b05">Personnalisé</a></li>
                         </ul>
                     </div>
                     <div id="test1" class="col s12 p-10">
@@ -642,7 +610,8 @@
                                 </div>
                                 <div class="col s12">
                                     <div class="input-field col s12">
-                                        <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Ajouter un lieu">
+                                        <input type="text" id="autocomplete-input" class="autocomplete"
+                                            placeholder="Ajouter un lieu">
                                         <label data-error="wrong" data-success="right" for="autocomplete-input"><i
                                                 class="material-icons">location_on</i></label>
                                     </div>
@@ -687,9 +656,12 @@
                 <div class="row p-0">
                     <div class="col s12">
                         <ul class="tabs">
-                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons" style="color:#287b05">info_outline</i></a></li>
-                            <li class="tab col s3"><a href="#test4"><i class="material-icons" style="color:#287b05">group</i></a></li>
-                            <li class="tab col s3"><a href="#test5"><i class="material-icons" style="color:#287b05">assignment</i></a></li>
+                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons"
+                                        style="color:#287b05">info_outline</i></a></li>
+                            <li class="tab col s3"><a href="#test4"><i class="material-icons"
+                                        style="color:#287b05">group</i></a></li>
+                            <li class="tab col s3"><a href="#test5"><i class="material-icons"
+                                        style="color:#287b05">assignment</i></a></li>
                         </ul>
                     </div>
                     <div id="test3" class="col s12">
@@ -823,58 +795,60 @@
 
     <main id="participe">
         <!-- Modal Trigger -->
-
+        <!--Partie Transactions-->
         <div class="row mt-20 container-fluid">
         </div>
         <div class="row px-10">
             <ul class="card collection">
                 <li class="collection-item avatar">
-                    <img src="images/3.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Avocato --</span>
+                    <!-- <img src="images/3.jpg" alt="avocat" class=" materialboxed circle"> -->
+                    <span class="title text-bold">--Transactions #00--</span>
                     <p>
-                        <small>Créé le 25/10/2018</small><br>
-                        <small class="badge blue text-white p-5">En cours</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
+                        <small>Effectuée le 09/02/2019 <time>14:30</time></small><br>
+                        <small class="badge p-5">Carburant essence</small><br>
+                        <small class="badge p-5">Quantité: 10 litres</small><br>
+                        <small class="badge p-5">Montant : 20 000 Fcfa</small><br>
+                        <span style="display: block;" class="mt-10 btnPositionTrans">
                             <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
                         </span>
                     </p>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="images/20.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- TomLabs --</span>
+                    <!-- <img src="images/20.jpg" alt="avocat" class=" materialboxed circle"> -->
+                    <span class="title text-bold">-- Transcation #01--</span>
                     <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
+                        <small>Effectuée le 09/02/2019 <time>12:10</time></small><br>
+                        <small class="badge p-5">Carburant essence</small><br>
+                        <small class="badge p-5">Quantité: 10 litres</small><br>
+                        <small class="badge p-5">Montant : 20 000 Fcfa</small><br>
+                        <span style="display: block;" class="mt-10 btnPositionTrans">
                             <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
                         </span>
                     </p>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="images/12.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Simplon-241 --</span>
+                    <!-- <img src="images/12.jpg" alt="avocat" class=" materialboxed circle"> -->
+                    <span class="title text-bold">-- Transaction #02--</span>
                     <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
+                        <small>Effectuée le 08/02/2019 à <time>09:30</time></small><br>
+                        <small class="badge p-5">Carburant essence</small><br>
+                        <small class="badge p-5">Quantité: 10 litres</small><br>
+                        <small class="badge p-5">Montant : 20 000 Fcfa</small><br>
+                        <span style="display: block;" class="mt-10 btnPositionTrans">
+                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
                         </span>
                     </p>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="images/11.jpg" alt="avocat" class=" materialboxed circle">
-                    <span class="title text-bold">-- Campagne241 --</span>
+                    <!-- <img src="images/11.jpg" alt="avocat" class=" materialboxed circle"> -->
+                    <span class="title text-bold">-- Transaction #03--</span>
                     <p>
-                        <small>Créé le 12/11/2018</small><br>
-                        <small class="badge red text-white p-5">Terminée</small><br>
-                        <span style="display: block;" class="mt-10">
-                            <a href="#mymodal" class="modal-trigger"><i class="material-icons" style="color:grey">remove_red_eye</i></a>&nbsp;
-                            <a href="#"><i class="material-icons" style="color:grey;">edit</i></a>&nbsp;
+                        <small>Effectuée le 08/02/2019 à <time>08:00</time></small><br>
+                        <small class="badge p-5">Carburant essence</small><br>
+                        <small class="badge p-5">Quantité: 10 litres</small><br>
+                        <small class="badge p-5">Montant : 20 000 Fcfa</small><br>
+                        <span style="display: block;" class="mt-10 btnPositionTrans">
+                            <a href="#"><i class="material-icons" style="color:grey;">delete</i></a>
                         </span>
                     </p>
                 </li>
@@ -924,7 +898,8 @@
                     <div class="col s12" style="padding:0;">
                         <ul class="tabs">
                             <li class="tab col s3 active"><a href="#test1" style="color:#287b05">Standard</a></li>
-                            <li class="tab col s3"><a class="active" href="#test2" style="color:#287b05">Personnalisé</a></li>
+                            <li class="tab col s3"><a class="active" href="#test2"
+                                    style="color:#287b05">Personnalisé</a></li>
                         </ul>
                     </div>
                     <div id="test1" class="col s12 p-10">
@@ -991,11 +966,13 @@
                                 </div>
                                 <div class="col s12">
                                     <div class="input-field col s12">
-                                        <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Ajouter un lieu">
+                                        <input type="text" id="autocomplete-input" class="autocomplete"
+                                            placeholder="Ajouter un lieu">
                                         <label data-error="wrong" data-success="right" for="autocomplete-input"><i
                                                 class="material-icons">location_on</i></label>
                                     </div>
-                                    <button class="btn waves-effect waves-light text-center" type="submit" name="action">
+                                    <button class="btn waves-effect waves-light text-center" type="submit"
+                                        name="action">
                                         Ajouter
                                     </button>
                                 </div>
@@ -1018,7 +995,8 @@
                                 <input type="text" id="label" class="validate">
                                 <label for="label">Label</label>
                             </div>
-                            <button id="send" class="btn waves-effect waves-light" type="submit" value="Ajouter" name="action">Ajouter
+                            <button id="send" class="btn waves-effect waves-light" type="submit" value="Ajouter"
+                                name="action">Ajouter
                                 <i class="material-icons right">add</i>
                             </button>
 
@@ -1036,9 +1014,12 @@
                 <div class="row p-0">
                     <div class="col s12">
                         <ul class="tabs">
-                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons" style="color:#287b05">info_outline</i></a></li>
-                            <li class="tab col s3"><a href="#test4"><i class="material-icons" style="color:#287b05">group</i></a></li>
-                            <li class="tab col s3"><a href="#test5"><i class="material-icons" style="color:#287b05">assignment</i></a></li>
+                            <li class="tab col s3 active"><a href="#test3"><i class="material-icons"
+                                        style="color:#287b05">info_outline</i></a></li>
+                            <li class="tab col s3"><a href="#test4"><i class="material-icons"
+                                        style="color:#287b05">group</i></a></li>
+                            <li class="tab col s3"><a href="#test5"><i class="material-icons"
+                                        style="color:#287b05">assignment</i></a></li>
                         </ul>
                     </div>
                     <div id="test3" class="col s12">
@@ -1067,7 +1048,7 @@
                             <li class="collection-item">
 
                                 <div>
-                                    <img src="images/avatar.png" width="50" class="circle" alt="avatar">
+                                    <img src="images/mlra6.jpg" width="50" class="circle" alt="avatar">
                                     <span style="line-height:10px;">mebale Noel</span>
                                     <a href="#!" class="secondary-content"><i class="material-icons ">delete</i></a>
                                 </div>
@@ -1179,22 +1160,10 @@
                 </div>
             </div>
         </div>
-        <section>
-            <div class="fixed-action-btn">
-                <a class="btn-floating btn-large red">
-                    <i class="large material-icons">share</i>
-                </a>
-                <ul>
-                    <li><a class="btn-floating blue"><i class='fab fa-facebook-square' style='font-size:24px'></i></a></li>
-                    <li><a class="btn-floating red"><i class='fab fa-youtube-square' style='font-size:24px'></i></a></li>
-                    <li><a class="btn-floating black"><i class='fab fa-twitter-square' style='font-size:24px'></i></a></li>
-                    <li><a class="btn-floating black"><i class='fab fa-instagram' style='font-size:24px'></i></a></li>
-                </ul>
-            </div>
-        </section>
         <!-- Voir modal -->
     </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/js/script.js"></script>

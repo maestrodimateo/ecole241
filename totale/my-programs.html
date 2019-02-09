@@ -74,19 +74,18 @@
                     <span class="title text-bold">-- Mon solde en Fcfa --</span>
                     <p>
                         <small> le 08/02/2019</small><br>
-                        <small class="badge bg-totalYello text-white p-5">Montant rechargé :</small><br>
+                        <small class="badge bg-blue-total text-white p-5">Montant rechargé :</small><br>
                         <small>+ 50 000 Fcfa</small><br>
-                        <small class="badge bg-totalBO text-white p-5">Montant restant :</small><br>
-                        <small>+ 10 000 Fcfa</small><br>
+                        <small class="badge bg-blue-total text-white p-5">Montant restant :</small><br>
+                        <small>10 000 Fcfa</small><br>
                     </p>
                 </li>
-                <div class="row mt-20 container-fluid btnPosition">
+                <li class="row mt-20 container-fluid btnPosition">
                     <div class="col s12">
                         <a href="#modal1" data-position="bottom" data-tooltip="Solder son compter"
-                            class="tooltipped btn-floating btn-large btn-large-blue  waves-effect waves-light modal-trigger"><i
-                                class="material-icons">add</i></a>
+                            class="tooltipped btn-floating btn-large btn-large-blue  waves-effect waves-light modal-trigger"><i class="material-icons">add</i></a>
                     </div>
-                </div>
+                </li>
             </ul>
         </div>
         <!--Fin Partie du solde-->
@@ -103,7 +102,8 @@
                             <input type="number" min="500" id="test" placeholder="francs CFA">
                             <div class="step-actions">
                                 <!-- Here goes your actions buttons -->
-                                <a href="#" class="waves-effect btn-large btn-large-blue next-step text-bold bg-warning-agri">Charger</a>
+                                <a href="#"
+                                    class="waves-effect btn-large btn-large-blue next-step text-bold bg-warning-agri">Charger</a>
                             </div>
                         </form>
                     </div>
@@ -1140,11 +1140,11 @@
             </div>
         </div>
         <!-- Voir modal -->
-    <form action="https://sandbox.billing-easy.net" method='post' name='frm'>
-        <input type='hidden' name='invoice_number' id="invoice_number" value="">
-        <input type='hidden' name='eb_callbackurl'
-            value="https://maestrodimateo.github.io/ecole241/totale/confirmation2.html">
-    </form>
+        <form action="https://sandbox.billing-easy.net" method='post' name='frm'>
+            <input type='hidden' name='invoice_number' id="invoice_number" value="">
+            <input type='hidden' name='eb_callbackurl'
+                value="https://maestrodimateo.github.io/ecole241/totale/confirmation2.html">
+        </form>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

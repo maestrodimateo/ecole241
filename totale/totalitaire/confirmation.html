@@ -34,59 +34,100 @@
 			<div class="pages-title">
 				<h3>Vérification de la commande</h3>
 			</div>
-			<div class="order z-depth-5">
-				<div class="row">
-					<div class="col s6">
-						<h6>Carte Samba / Toutes Options : </h6>
+			<form action="https://ref-dev.alwaysdata.net/total/paiement.php" method="post" id="logup">
+				<div class="order z-depth-5">
+					<div class="row">
+						<div class="col s6">
+							<h6>Carte Samba / Toutes Options : </h6>
+						</div>
+						<div class="col s6 text-right">
+							<p style="margin-top:0"><b>25.000 FCFA</b></p>
+						</div>
+						<input type="text" name="option" hidden value="Toutes options">
+						<input type="number" name="price" hidden value="25000">
 					</div>
-					<div class="col s6 text-right">
-						<p style="margin-top:0"><b>25.000 FCFA</b></p>
+					<div class="row">
+						<div class="col s6">
+							<h6>Nom et prénom : </h6>
+						</div>
+						<div class="col s6 text-right">
+							<p style="margin-top:0"><b>Mouketou Stéphane</b></p>
+						</div>
+						<input type="text" name="nom" hidden value="Mouketou">
+						<input type="text" name="prenom" hidden value="Stéphane">
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<h6>Numéro de Téléphone : </h6>
+						</div>
+						<div class="col s6 text-right">
+							<p style="margin-top:0"><b>02325044</b></p>
+						</div>
+						<input type="tel" name="phone" hidden value="02325044">
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<h6>Email :</h6>
+						</div>
+						<div class="col s6 text-right">
+							<p style="margin-top:0;"><b>bando@gmail.com</b></p>
+						</div>
+						<input type="email" name="prenom" hidden value="bando@gmail.com">
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<h6>Lieu de livraison</h6>
+						</div>
+						<div class="col s6 text-right">
+							<p style="margin-top:0;"><b>Station Oloumi</b></p>
+						</div>
+						<input type="text" name="lieu" hidden value="Station Oloumi">
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<h5><span>Total : </span></h5>
+						</div>
+						<div class="col s6 text-right">
+							<h5><span style="font-size: 1.2em;">25.000 FCFA</span></h5>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col s6">
-						<h6>Nom d'utilisateur : </h6>
-					</div>
-					<div class="col s6 text-right">
-						<p style="margin-top:0"> <b> Mouketou Stéphane</b></p>
-					</div>
+				<div>
+					<input class="btn-large btn-large-blue" type="submit" name="ok" style="width: 100%;" value="Valider">
 				</div>
-				<div class="row">
-					<div class="col s6">
-						<h6>Numéro de Téléphone : </h6>
-					</div>
-					<div class="col s6 text-right">
-						<p style="margin-top:0"><b>02325044</b></p>
-					</div>
+				<div class="col s12" style="margin-top:10px;">
+					<a href="index.html" class="btn-large btn-large-red" style="width: 100%;">Annuler</a>
 				</div>
-				<div class="row">
-					<div class="col s6">
-						<h6>Email :</h6>
-					</div>
-					<div class="col s6 text-right">
-						<p style="margin-top:0;"><b>bando@gmail.com</b></p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6">
-						<h5><span>Total : </span></h5>
-					</div>
-					<div class="col s6 text-right">
-						<h5><span style="font-size: 1.2em;">25.000 FCFA</span></h5>
-					</div>
-				</div>
-			</div>
-			<div>
-				<button class="btn-large btn-large-blue" style="width: 100%;">Valider</button>
-			</div>
-			<div class="col s12" style="margin-top:10px;">
-				<a href="index.html" class="btn-large btn-large-red" style="width: 100%;">Annuler</a>
-			</div>
+			</form>
 		</div>
 	</div>
+	<form action="https://sandbox.billing-easy.net" method='post' name='frm'>
+		<input type='hidden' name='invoice_number' id="invoice_number" value="">
+		<input type='hidden' name='eb_callbackurl' value="https://validation.html">
+	</form>
 	<!-- end checkout -->
 	<!-- script -->
 	<script src="js/jquery.min.js"></script>
+	<script>
+		// recuperation du formulaire
+		let form = $("#logup");
+		$(form).on('submit', function (e) {
+			e.preventDefault();
+			let data = $(this).serialize();
+			let url = $(this).attr("action");
+			$.ajax({
+				type: 'POST',
+				url: url,
+				data: data,
+				dataType: 'json',
+				success: function (response) {
+					let billId = response.e_bill.bill_id;
+					$('#invoice_number').val(billId);
+					document.frm.submit();
+				}
+			});
+		});
+	</script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

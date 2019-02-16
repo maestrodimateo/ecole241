@@ -67,3 +67,6 @@ body{
 
 .btn-large:hover{background-color: #F8981D;}
 .input-field-reset{padding: 0;}
+#load::placeholder{
+    color: white;
+}

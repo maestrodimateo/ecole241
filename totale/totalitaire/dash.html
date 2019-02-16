@@ -33,102 +33,106 @@
 		
 	</div>
 	<!-- end navbar -->
-<br><br><br><br>
-	 <div class="container">
-	 	<div class="row">
-	 		<h3>Votre solde est de: 50 000 FCFA</h3>
-	 	</div>
-	 </div>
-<br><br>
-<!-- note -->
-	<div class="note app-section">
+	<div style="margin:30px 0 20px;padding: 50px 0" class="bg-red-total">
+		<h1 class="text-center text-white">
+			Mon solde : 0 FCFA
+		</h1>
+	</div>
+	<div class="offers">
 		<div class="container">
-			<h5>CHARGER VOTRE COMPTE</h5>
-			<div class="input-field">
-					<input id="number" type="text" class="validate" placeholder="En F cfa">
-		   </div>
-			<button class="button">VALIDER</button>
+			<div class="row">
+				<div class="col s6 ">
+					<div class="entry bg-blue-total" style="text-align: center;">
+						<a href="transaction.html"><i class="material-icons" style="color:white;">description</i>
+							<h5 class="text-white">MES TRANSACTIONS</h5>
+						</a>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry bg-blue-total"  style="text-align: center">
+						<a href="recharge.html"><i class="material-icons" style="color:white;">call_to_action</i>
+							<h5 class="text-white"> MES RECHARGES</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="entry bg-blue-total"  style="text-align: center">
+						<a href=""><i class="material-icons" style="color:white;">edit</i>
+							<h5 class="text-white">PROFIL</h5>
+						</a>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="entry bg-blue-total"  style="text-align: center">
+						<a href="signaler.html"><i class="material-icons" style="color:white;">warning</i>
+							<h5 class="text-white">SIGNALER</h5>
+						</a>
+					</div>
+				</div>
+	
+			</div>
+			<div class="col s6">
+				<div class="entry bg-blue-total"  style="text-align: center">
+					<a href="#"><i class="material-icons" style="color:white;">shop</i>
+						<h5 class="text-white">BOUTIQUE</h5>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end offers -->
+<!-- note -->
+	<div class="note app-section bg-blue-total">
+		<div class="container">
+			<form action="https://ref-dev.alwaysdata.net/total/paiement2.php" method="POST" id="logup">
+				<h5 style="color:#fff;">RECHARGER MA CARTE</h5>
+				<div class="input-field">
+					<input id="load" type="number" name="price" class="validate" placeholder="En FCFA">
+			   </div>
+				<input type="submit" class="btn" name="ok" style="background-color:#ED1A3B;">
+			</form>
 		</div>
 	</div>
 	<!-- end note -->
 
 	<!-- offers -->
-	<div class="offers">
-		<div class="container">
-			<div class="row">
-				<div class="col s6">
-					<div class="entry" style="text-align: center">
-						<a href="transaction.html"><i class="material-icons">description</i>
-						<h5>TRANSACTIONS</h5></a>
-						<p>Voir toutes transactions effectuées</p>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="entry"  style="text-align: center">
-						<a href="recharge.html"><i class="material-icons">call_to_action</i>
-						<h5> MES RECHARGES</h5></a>
-						<p>Listes de toutes les recharges effectuées</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="entry" style="text-align: center">
-						<a href=""><i class="material-icons">edit</i>
-						<h5>PROFIL</h5></a>
-						<p>Editer mon profil</p>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="entry" style="text-align: center">
-						<a href="signaler.html"><i class="material-icons">warning</i>
-						<h5>SIGNALER</h5></a>
-						<p>Signaler une perte de carte</p>
-					</div>
-				</div>
-
-			</div>
-			<br>
-				<div class="col s6">
-					<div class="entry" style="text-align: center">
-						<a href="signaler.html"><i class="material-icons">shop</i>
-						<h5>BOUTIQUE</h5></a>
-						<p>Découvrir des produits</p>
-					</div>
-				</div>
+	<a href="index.html">
+		<div style="padding: 20px 0" class="bg-red-total">
+			<p class="text-center text-white">
+				Déconnexion
+			</p>
 		</div>
-	</div>
-	<!-- end offers -->
-
-
-	
-	<!-- footer
-	<footer>
-		<div class="container">
-			<h6>Find & follow us</h6>
-			<ul class="icon-social">
-				<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li class="google"><a href="#"><i class="fa fa-google"></i></a></li>
-				<li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-				<li class="rss"><a href="#"><i class="fa fa-rss"></i></a></li>
-			</ul>
-			<div class="tel-fax-mail">
-				<ul>
-					<li><span>Tel:</span> 900000002</li>
-					<li><span>Fax:</span> 0400000098</li>
-					<li><span>Email:</span> info@youremail.com</li>
-				</ul>
-			</div>
-		</div>
-		<div class="ft-bottom">
-			<span>Copyright © 2017 All Rights Reserved </span>
-		</div>
-	</footer>
-	 end footer -->
-	
+	</a>
+	<form action="https://sandbox.billing-easy.net" method='post' name='frm'>
+		<input type='hidden' name='invoice_number' id="invoice_number" value="">
+		<input type='hidden' name='eb_callbackurl'
+			value="https://maestrodimateo.github.io/ecole241/totale/totalitaire/dashvalid.html">
+	</form>
 	<!-- script -->
 	<script src="js/jquery.min.js"></script>
+	<script>
+		// recuperation du formulaire
+		let form = $("#logup");
+		$(form).on('submit', function (e) {
+			e.preventDefault();
+			let data = $(this).serialize();
+			let url = $(this).attr("action");
+			$.ajax({
+				type: 'POST',
+				url: url,
+				data: data,
+				dataType: 'json',
+				success: function (response) {
+					console.log(response);
+					// let billId = response.e_bill.bill_id;
+					// $('#invoice_number').val(billId);
+					// document.frm.submit();
+				}
+			});
+		});
+	</script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

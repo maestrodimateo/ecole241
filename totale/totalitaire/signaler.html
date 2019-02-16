@@ -9,7 +9,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="HandheldFriendly" content="True">
 	
-	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="shortcut icon" href="img/logototal.png">
 	
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/materialize.min.css">
@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="css/owl.transitions.css">
 	<link rel="stylesheet" href="css/lightbox.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style2.css">
 	
 </head>
 <body>
@@ -36,11 +37,10 @@
 	<div class="register app-pages app-section">
 		<div class="container">
 			<div class="pages-title">
-				<h3>Signaler une anomalie</h3>
+				<h3>Signaler un problème</h3>
 			</div>
-				<label>Motif du Signal</label>
 				<select class="browser-default" style="color:black">
-					<option value="" disabled selected>Choisir la cause</option>
+					<option value="" disabled selected>Motif du signal</option>
 					<option value="Vol">Vol</option>
 					<option value="Invalidité">Invalidité</option>
 					<option value="Perte">Perte</option>
@@ -50,15 +50,18 @@
 						<div class="row">
 							<div class="input-field col s12"><br>
 							<textarea id="textarea1" class="materialize-textarea"></textarea>
-							<label for="textarea1">Expliquez en quelques lignes votre raison</label>
+							<label for="textarea1" style="color:#2c3e50;">Expliquez en quelques lignes votre raison</label>
 							</div>
 						</div>
 						</form>
 					</div>
 				<div style="text-align: center;">
-					<a class="btn-large" href="#" style="background-color:red">Soumettre</a>
-					<br> <hr style="width:15%;">
-					<a class="btn-large" href="#" style="background-color:grey">Retour</a>
+				<div>
+					<a href="dash.html" class="btn-large btn-large-blue" style="width: 100%;">Soumettre</a>
+				</div>
+				<div class="col s12" style="margin-top:10px;">
+					<a href="dash.html" class="btn-large btn-large-red" style="width: 100%;">Annuler</a>
+				</div>
 				</div>
 			</div>
 		</div>

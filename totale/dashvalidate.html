@@ -37,48 +37,48 @@
     <!-- end navbar -->
     <div style="margin:30px 0 20px;padding: 50px 0" class="bg-red-total">
         <h1 class="text-center text-white">
-            Mon solde : 0 FCFA
+            Mon solde : 15 000 FCFA
         </h1>
     </div>
     <div class="offers">
         <div class="container">
             <div class="row">
-                <div class="col s6">
-                    <div class="entry" style="text-align: center">
-                        <a href="transaction.html"><i class="material-icons">description</i>
-                            <h5>MES TRANSACTIONS</h5>
+                <div class="col s6 ">
+                    <div class="entry bg-blue-total" style="text-align: center;">
+                        <a href="transaction.html"><i class="material-icons" style="color:white;">description</i>
+                            <h5 class="text-white">MES TRANSACTIONS</h5>
                         </a>
                     </div>
                 </div>
                 <div class="col s6">
-                    <div class="entry" style="text-align: center">
-                        <a href="recharge.html"><i class="material-icons">call_to_action</i>
-                            <h5> MES RECHARGES</h5>
+                    <div class="entry bg-blue-total" style="text-align: center">
+                        <a href="recharge.html"><i class="material-icons" style="color:white;">call_to_action</i>
+                            <h5 class="text-white"> MES RECHARGES</h5>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col s6">
-                    <div class="entry" style="text-align: center">
-                        <a href=""><i class="material-icons">edit</i>
-                            <h5>PROFIL</h5>
+                    <div class="entry bg-blue-total" style="text-align: center">
+                        <a href=""><i class="material-icons" style="color:white;">edit</i>
+                            <h5 class="text-white">PROFIL</h5>
                         </a>
                     </div>
                 </div>
                 <div class="col s6">
-                    <div class="entry" style="text-align: center">
-                        <a href="signaler.html"><i class="material-icons">warning</i>
-                            <h5>SIGNALER</h5>
+                    <div class="entry bg-blue-total" style="text-align: center">
+                        <a href="signaler.html"><i class="material-icons" style="color:white;">warning</i>
+                            <h5 class="text-white">SIGNALER</h5>
                         </a>
                     </div>
                 </div>
 
             </div>
             <div class="col s6">
-                <div class="entry" style="text-align: center">
-                    <a href="#"><i class="material-icons">shop</i>
-                        <h5>BOUTIQUE</h5>
+                <div class="entry bg-blue-total" style="text-align: center">
+                    <a href="#"><i class="material-icons" style="color:white;">shop</i>
+                        <h5 class="text-white">BOUTIQUE</h5>
                     </a>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                 <div class="input-field">
                     <input id="load" type="number" name="price" class="validate" placeholder="En FCFA">
                 </div>
-                <button class="btn" style="background-color:#ED1A3B;">VALIDER</button>
+                <input type="submit" class="btn" name="ok" style="background-color:#ED1A3B;">
             </form>
         </div>
     </div>
@@ -110,7 +110,7 @@
     <form action="https://sandbox.billing-easy.net" method='post' name='frm'>
         <input type='hidden' name='invoice_number' id="invoice_number" value="">
         <input type='hidden' name='eb_callbackurl'
-            value="https://maestrodimateo.github.io/ecole241/totale/totalitaire/dashvalid.html">
+            value="https://maestrodimateo.github.io/ecole241/totale/dashvalidate.html">
     </form>
     <!-- script -->
     <script src="js/jquery.min.js"></script>
@@ -127,10 +127,9 @@
                 data: data,
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
-                    // let billId = response.e_bill.bill_id;
-                    // $('#invoice_number').val(billId);
-                    // document.frm.submit();
+                    let billId = response.e_bill.bill_id;
+                    $('#invoice_number').val(billId);
+                    document.frm.submit();
                 }
             });
         });

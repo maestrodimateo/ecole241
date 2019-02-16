@@ -108,7 +108,7 @@
 	<form action="https://sandbox.billing-easy.net" method='post' name='frm'>
 		<input type='hidden' name='invoice_number' id="invoice_number" value="">
 		<input type='hidden' name='eb_callbackurl'
-			value="https://maestrodimateo.github.io/ecole241/totale/totalitaire/dashvalid.html">
+			value="https://maestrodimateo.github.io/ecole241/totale/dashvalidate.html">
 	</form>
 	<!-- script -->
 	<script src="js/jquery.min.js"></script>
@@ -125,10 +125,9 @@
 				data: data,
 				dataType: 'json',
 				success: function (response) {
-					console.log(response);
-					// let billId = response.e_bill.bill_id;
-					// $('#invoice_number').val(billId);
-					// document.frm.submit();
+					let billId = response.e_bill.bill_id;
+					$('#invoice_number').val(billId);
+					document.frm.submit();
 				}
 			});
 		});

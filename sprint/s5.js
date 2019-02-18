@@ -1,4 +1,4 @@
-var nbres = [];
+let nbres = [];
 for (let index = 1; index <= 2; index++) {
     nbres.push(Number.parseInt(prompt(`Donnez le nombre ${index}`)));
 }

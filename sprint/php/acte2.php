@@ -9,11 +9,11 @@
     $obj = new stdClass;
 ?>
 <ul>
-    <li><?php var_dump($prenom) ?></li>
-    <li><?php var_dump($nbre) ?></li>
-    <li><?php var_dump($float) ?></li>
-    <li><?php var_dump($bool) ?></li>
-    <li><?php var_dump($tab) ?></li>
-    <li><?php var_dump($null) ?></li>
-    <li><?php var_dump($obj) ?></li>
+    <li><?= var_dump($prenom) ?></li>
+    <li><?= var_dump($nbre) ?></li>
+    <li><?= var_dump($float) ?></li>
+    <li><?= var_dump($bool) ?></li>
+    <li><?= var_dump($tab) ?></li>
+    <li><?= var_dump($null) ?></li>
+    <li><?= var_dump($obj) ?></li>
 </ul>

@@ -1,12 +1,9 @@
 
 <?php 
     $tab = array('nom' => 'noel');
-    $prenom = 'noel';
-    $nbre = 1;
-    $float = 1.5;
-    $bool = true;
-    $null = null;
-    $obj = new stdClass;
+    $variable = array('prenom' => 'noel', 'nbre' => 1,'float'=> 1.5,'bool' => true,'null' => null);
+    extract($variable);
+    $obj = new stdClass
 ?>
 <ul>
     <li><?= var_dump($prenom) ?></li>

@@ -1,4 +1,3 @@
-
 <?php 
     $tab = array('nom' => 'noel');
     $variable = array('prenom' => 'noel', 'nbre' => 1,'float'=> 1.5,'bool' => true,'null' => null);

@@ -31,7 +31,7 @@
                                 <td><?= $key + 1 ?></td>
                                 <td><?= $student['prenom'] ?></td>
                                 <td><?= $student['nom'] ?></td>
-                                <td><?= $student['age'] ?></td>
+                                <td><?= $student['age'] ?> ans</td>
                                 <td><a href="<?= $student['profil'] ?>" class="btn btn-sm btn-primary" target="_blank">Consulter</a></td>
                             </tr>
                             <?php endforeach; ?>

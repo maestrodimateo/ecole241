@@ -18,7 +18,8 @@ h1, h2, h3{text-transform: uppercase;}
 .mb-20{margin-bottom:20px;}
 .d-inline-block{display: inline-block;}
 .bg-indigo{background-color: #516ABC;}
-.bg-orange{background-color: #FF9900;}
+.bg-orange{background-color: #F90;}
+.bg-white{background-color: #2372D9;}
 .bg-pink{background-color: #FD225F;}
 .d-block{display: block;}
 .pt-100{padding-top: 100px;}
@@ -43,6 +44,8 @@ h1, h2, h3{text-transform: uppercase;}
 .hr-bold{ height: 3px;background-color: #fff;width: 70px;border-style: none;margin-left: 0;}
 .btn-white{display:block;color: #516ABC;background-color: #fff;border:none;width:100%;padding: 15px 10px;font-size: 1.3em;cursor: pointer;}
 #mapid{border: solid 10px #fff;}
+.color-black{color: #2c3e50;}
+
 /* le header */
 header{
     position: relative;

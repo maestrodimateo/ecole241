@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(wood.jpg);
+    /* background-color: #ccc; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.book{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.page{
+    width: 400px;
+    height: 600px;
+    margin: 0;
+    padding: 30px;
+    background-color:#fff;
+    border-left: solid 20px red;
+    transform: rotate(-40deg) skewX(10deg) scale(.8);
+    -webkit-transform: rotate(-40deg) skewX(10deg) scale(.8);
+    -moz-transform: rotate(-40deg) skewX(10deg) scale(.8);
+    -ms-transform: rotate(-40deg) skewX(10deg) scale(.8);
+    -o-transform: rotate(-40deg) skewX(10deg) scale(.8);
+   box-shadow: -70px 70px 70px -10px rgba(0,0,0,0.75);
+}
+
+.page h1{
+    margin: 0 0 20px;
+    padding:0;
+    text-align: center;
+    color: #ccc;
+    text-decoration: underline;
+}
+.page p{
+    font-size: 14px;
+    margin: 0;
+    padding:0;
+    text-align: justify;
+}
+.page:before{
+    content:'';
+    width:30px;
+    height:100%;
+    background-color: #951A0E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-165%, -5.5%);
+}
+.page:after{
+    content:'';
+    width:100%;
+    height:27px;
+    background-color:#ccc;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform:  skewX(-45deg) translate(-2%, 100%);
+}

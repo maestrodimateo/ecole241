@@ -61,9 +61,7 @@ $students = [
         'profil' => "https://elieyan.github.io/ecole241/profil/"
     )
 ];
-?>
-
-<!doctype html>
+?><!doctype html>
 <html lang="fr">
   <head>
     <title>Tous les etudiants</title>
@@ -87,15 +85,15 @@ $students = [
                 </tr>
             </thead>
             <tbody>
-                <?php for($i = 0;$i < count($students); $i++): ?>
+                <?php foreach($students as $cle => $student): ?>
                 <tr>
-                    <td><?= $i+1 ?></td>
-                    <td><?= $students[$i]['prenom']?></td>
-                    <td><?= $students[$i]['nom'] ?></td>
-                    <td><?= $students[$i]['age'] ?> ans</td>
-                    <td><a href="<?= $students[$i]['profil'] ?>" target="_blank" class="btn btn-primary">Consulter</a></td>
+                    <td><?= $cle + 1 ?></td>
+                    <td><?= $student['prenom']?></td>
+                    <td><?= $student['nom'] ?></td>
+                    <td><?= $student['age'] ?> ans</td>
+                    <td><a href="<?= $student['profil'] ?>" target="_blank" class="btn btn-primary">Consulter</a></td>
                 </tr>
-                <?php endfor; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
       </div>

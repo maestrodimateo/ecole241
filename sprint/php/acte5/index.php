@@ -1,6 +1,6 @@
 <?php include 'data.php'; ?>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title>Etudiants d'okacode</title>
     <!-- Required meta tags -->
@@ -24,18 +24,18 @@
                             <th>Age</th>
                             <th>Profil</th>
                         </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($students as $key => $student) : ?>
-                            <tr>
-                                <td><?= $key + 1 ?></td>
-                                <td><?= $student['prenom'] ?></td>
-                                <td><?= $student['nom'] ?></td>
-                                <td><?= $student['age'] ?> ans</td>
-                                <td><a href="<?= $student['profil'] ?>" class="btn btn-sm btn-primary" target="_blank">Consulter</a></td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($students as $key => $student) : ?>
+                        <tr>
+                            <td><?= $key + 1 ?></td>
+                            <td><?= $student['prenom'] ?></td>
+                            <td><?= $student['nom'] ?></td>
+                            <td><?= $student['age'] ?> ans</td>
+                            <td><a href="<?= $student['profil'] ?>" class="btn btn-sm btn-primary" target="_blank">Consulter</a></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
                 </table>
             </div>
         </div>

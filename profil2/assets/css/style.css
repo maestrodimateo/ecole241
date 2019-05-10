@@ -1,0 +1,39 @@
+/* 
+couleur de base : #CB2926
+couleur secondaire : #024248
+*/
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+/* la top bar du site */
+.topbar{
+    padding:0 50px;
+    background-color:#024248;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 5em;
+}
+.menu{
+    align-self: stretch;
+    display: flex;
+}
+.menu a{
+    color: #FDFEFF;
+    text-decoration: none;
+    align-self: center;
+    padding: 32px 10px;
+}
+.menu a:hover{
+    background-color: #213435;
+    border-bottom: solid 2px #fff;
+}
+.showcase{
+    background-image: url(../img/bg.jpg);
+    padding-top: 10px;
+    height: 500px;
+}

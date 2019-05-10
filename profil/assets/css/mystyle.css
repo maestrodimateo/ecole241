@@ -251,3 +251,68 @@ section p{
     grid-template-rows: 1fr;
     grid-column-gap: 2%;
 }
+
+/* les media queries */
+@media(max-width:1024px){
+
+
+    .container{padding:10px 10px;}
+    .font-size-30{font-size: 20px;}
+    .pt-100{padding-top: 10px;}
+    .self{width: 100%;}
+    .d-none{display: none;}
+
+    .bg-inner > h1{
+        font-size: 30px;
+    }
+    .bg-inner > q{
+        font-size:16px;
+        padding: 10px;
+    }
+    .btn{
+        font-size: 20px;
+    }
+    /* coté gauche de la section */
+    .left-side{
+        overflow: visible;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0,0.1);
+    }
+    .left-side h2{
+        writing-mode: initial;
+        margin-top:20px;
+        margin: 0 40px 10px;
+        font-size: 1em;
+        transform: rotate(0deg);
+        text-align: center;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        background-color:#516ABC;
+    }
+        /* Coté droit de la section */
+    .right-side > div:first-child{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .right-side > div:nth-child(2){
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+    /* le footer */
+    #mapid{
+        border: solid 5px #fff;
+        height: 400px;
+        width:400px;
+    }
+}

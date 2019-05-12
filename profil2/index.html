@@ -15,14 +15,14 @@
     <!-- le haut de page -->
     <header>
         <!-- la navbar -->
-        <div class="topbar">
+        <div class="topbar container">
             <a href="#" class="logo">
                 <img src="assets/img/logo.png" alt="logo Maestrodimateo">
             </a>
             <!-- le menu de navigation -->
             <nav class="menu">
                 <a href="#">Accueil</a>
-                <a href="#">A propos</a>
+                <a href="#apropos">A propos</a>
                 <a href="#">Menu 3</a>
                 <a href="#">Menu 4</a>
                 <a href="#">Contact</a>
@@ -30,33 +30,40 @@
         </div>
 
         <section class="showcase">
-            <h1>Salut! Je m'appelle MEBALE Noël</h1>
-            <p>
-                Je suis un developpeur web et mobile
-            </p>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora vitae debitis laborum qui enim
-                iure, dignissimos neque exercitationem itaque sint assumenda aperiam nihil natus voluptas obcaecati
-                repellat nisi commodi.
-            </p>
-            <a href="#contact" class="btn-dark">Me contacte</a>
+            <!-- contenu de la showcase -->
+            <div class="content">
+                <h1>Salut! Je m'appelle MEBALE Noël</h1>
+                <hr>
+                <h2>
+                    Je suis un developpeur web et mobile
+                </h2>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora vitae debitis laborum qui enim
+                    iure, dignissimos neque exercitationem itaque sint assumenda aperiam nihil natus voluptas obcaecati
+                    repellat nisi commodi.
+                </p>
+                <a href="#contact" class="btn-dark">Me contacter</a>
+            </div>
+            <img src="assets/img/noelcopie2.png" alt="Mebale noël" class="my-pic">
         </section>
     </header>
 
     <!-- la partie a propos -->
-    <section>
+    <section class="about container" id="apropos">
 
         <!-- image et bouton de telechargement -->
         <div>
-            <img src="assets/img/noel-cut-removebg-hd.png" alt="moi-même" width="100">
-
-            <a href="#" download="">Télécharger mon CV</a>
+            <div class="pic-part">
+                <img class="profil-pic" src="assets/img/profil.png" alt="moi-même">
+            </div>
+            <a href="#" download="" class="cv-btn">Télécharger mon CV</a>
         </div>
 
         <!-- descriptif de ma personne -->
-        <div>
-            <h2 class="titre">A propos de moi</h2>
-            <span class="descript">developpeur web et mobile</span>
+        <div class="info">
+            <h2 class="titre">à propos de MEBALE Noël</h2>
+            <hr>
+            <span class="descript">Développeur web et mobile</span>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id placeat dolorum inventore unde laudantium
                 omnis quidem, reiciendis earum nesciunt cumque itaque quia velit assumenda excepturi neque amet
@@ -66,31 +73,32 @@
                 <ul>
                     <li> <span class="props">Nom et prénom: </span> MEBALE Noël</li>
                     <!-- sera plus tard calculé en js -->
-                    <li> <span class="props">Age: </span> 26 ans</li>
                     <li> <span class="props">Nationalité: </span> Gabonais</li>
+                    <li> <span class="props">Age: </span> 26 ans</li>
                 </ul>
                 <ul>
                     <li> <span class="props">Adresse: </span>Okala, commune d'Akanda au Gabon</li>
                     <li><span class="props">Email: </span><a href="mailto:noelmeb12@gmail.com"
                             class="mailto">noelmeb12@gmail.com</a></li>
-                    <li><span class="props">Téléphone: </span>+241 06 76 43 76</li>
+                    <li><span class="props">Téléphone: </span><a href="tel:+24106764376">+241 06 76 43 76</a></li>
                 </ul>
             </div>
             <a href="#contact" class="btn-dark">Me contacter</a>
 
             <!-- les icones -->
-            <div>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
             </div>
 
         </div>
     </section>
+<br><br>
+    <!-- <section>
 
-    <section>
-
-    </section>
+    </section> -->
 </body>
 
 </html>

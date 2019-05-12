@@ -2,18 +2,22 @@
 couleur de base : #CB2926
 couleur secondaire : #024248
 */
+html{scroll-behavior: smooth;}
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
+.container{padding:0 100px;}
+
 /* la top bar du site */
 .topbar{
-    padding:0 50px;
     background-color:#024248;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logo{
+    height: 85px; 
 }
 .logo img{
     width: 5em;
@@ -26,14 +30,173 @@ body{
     color: #FDFEFF;
     text-decoration: none;
     align-self: center;
-    padding: 32px 10px;
+    padding: 29px 10px;
+    transition: .3s;
 }
 .menu a:hover{
-    background-color: #213435;
+    background-color: #CA2925;
     border-bottom: solid 2px #fff;
 }
+/* la top bar du site */
+
+/* le showcase  */
 .showcase{
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/darkbg.jpg);
     padding-top: 10px;
-    height: 500px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+.content{
+    max-width: 50%;
+    padding-top: 5%;
+    padding-left: 100px;
+}
+.content > h1:first-child{
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+.content hr{
+    width: 10%;
+    border-color: #fff;
+    margin-left: 0;
+}
+.my-pic{
+    float: right;
+    position: absolute;
+    top: -30px;
+    right: 5%;
+    max-width: 350px;
+}
+.btn-dark{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color:#012527;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: .3s;
+}
+.btn-dark:hover{
+    background-color: #CA2925;
+}
+/* le showcase  */
+
+/* La partie A propos */
+.about{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Partie gauche */
+.pic-part{
+    box-shadow: 0px 2px 7px -1px rgba(173,173,173,1);
+}
+.profil-pic{
+    max-width: 300px;
+    display: inline-block;
+}
+.cv-btn{
+    box-shadow: 0px 2px 7px 1px rgba(173,173,173,1);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    color: #024248;
+    text-decoration: none;
+    transition: .3s;
+}
+.cv-btn:hover{
+    background-color: #CA2925;
+    color: #fff;
+}
+/* partie droite */
+.info{
+    max-width: 800px;
+}
+.info .titre{
+    margin: 0 auto;
+}
+.info hr{
+    width: 10%;
+    border-color: #024248;
+    margin-left: 0;
+}
+.titre::first-letter{ text-transform: uppercase;}
+.descript{
+    font-size: 20px;
+    text-align: justify;
+}
+.list-info{
+    display: flex;
+    justify-content: space-between;
+}
+.list-info ul{
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2.5em;
+}
+.list-info ul:nth-child(2){
+    margin-right: 100px;
+}
+.props{
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #024248;
+}
+.icons{
+    margin-top:40px;
+}
+.icons a{
+    padding: 9px 15px;
+    margin-right: 3px;
+    border: 1px solid #024248;
+    color: #CA2925;
+}
+
+/* responsive */
+
+/* tablettes */
+@media only screen and (max-width: 1024px) {
+    .content{padding-top: 0;padding-left: 30px;}
+    .container{padding: 20px;}
+    .info{width: 50%;}
+    .pic-part{text-align: center;}
+    .profil-pic{max-width: 100%;}
+}
+
+
+@media only screen and (max-width: 800px) {
+    .my-pic{display: none;}
+    .content{max-width: 80%;}
+    .showcase{overflow: visible;}
+    .about{flex-direction: column;}
+    .info{width: 90%;padding-left: 10px;margin-top: 20px;}
+    .list-info{flex-direction: column;width: 100%;line-height: 0.8em;}
+
+}
+
+/* telephones */
+@media only screen and (max-width: 720px) {
+    .topbar{
+        flex-direction: column;
+        font-size: 15px;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .menu a{
+        padding: 10px 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .content{padding-left: 10px;max-width: 90%;font-size: 0.75em;}
+    .info{font-size: 0.8em;}
+    .container{padding: 0;}
+    .about > div:first-child{padding: 0 10px;}
 }

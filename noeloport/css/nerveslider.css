@@ -68,7 +68,7 @@
 }
 
 .ns_nerveSlider .ns_slideContainer img {
-    position: absolute;
+    /* position: absolute; */
     z-index: auto;
 }
 

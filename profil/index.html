@@ -2,290 +2,450 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/mystyle.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200i,400,900" rel="stylesheet">
+    <title>Mebale-Noel-portfolio</title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="le portfolio de Mebale Noël, adepte de l'informatique'">
+    <meta name="keywords" content="Programmation informatique portfolio mebale noel okacode">
+    <!-- FAVICON -->
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- CSS FILES -->
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/nerveslider.css" rel="stylesheet" type="text/css">
+    <link href="css/tooltipster.css" rel="stylesheet" type="text/css">
+    <link href="css/scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/lightgallery.css" rel="stylesheet" type="text/css">
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
+    <link href="css/media.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
         integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
         crossorigin="" />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5.js"></script>
+        <![endif]-->
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
         integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
         crossorigin=""></script>
-    <title>Portfolio-mebale-noel</title>
+    <!-- NOSCRIPT -->
+    <noscript>
+        <link href="css/nojs.css" rel="stylesheet" type="text/css">
+    </noscript>
 </head>
 
 <body>
-    <header>
-        <div class="burger">
-            <a href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
-        </div>
-        <span class="logo"><img src="assets/img/logo.png" width="100" alt="logo"></span>
-        <!-- le contenu du background -->
-        <div class="bg-inner">
-            <h1>BIENVENUE DANS MON ENTRE</h1>
-            <q>Les clients ne vous mesurent pas à quel point vous avez essayé, ils vous mesurent sur ce que vous
-                livrez.</q>
-            <br> <small>- Steve Jobs</small>
-            <a href="#contact" class="btn">me contacter</a>
-        </div>
-
-        <a href="#personal"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-    </header>
-
-    <!-- section de presentation personnelle -->
-    <section id="personal" class="perso">
-        <!-- le titre à gauche -->
-        <div class="left-side pt-100">
-            <span>#01</span>
-            <h2>à propos de moi</h2>
-        </div>
-        <!-- le contenu principal -->
-        <div class="right-side pt-100 container">
-            <!-- haut du contenu principal -->
+    <!-- LOADING ANIMATION -->
+    <div id="site-loading"></div>
+    <!-- MAIN MENU -->
+    <div id="cv-menu">
+        <nav id="cv-main-menu">
+            <ul>
+                <!-- SIDEBAR MENU ICON -->
+                <li><a href="#" class="cv-menu-button fa fa-bars">Menu</a>
+                </li>
+                <!-- PAGE 1 LINK -->
+                <li class="links-to-floor-li cv-active" data-id="1" data-slug="home"><a href="#home"
+                        class="fa fa-home tooltip-menu" title="Accueil">Accueil</a>
+                </li>
+                <!-- PAGE 2 LINK -->
+                <li class="links-to-floor-li" data-id="2" data-slug="about"><a href="#about"
+                        class="fa fa-user tooltip-menu" title="A propos">A propos</a>
+                </li>
+                <!-- PAGE 3 LINK -->
+                <li class="links-to-floor-li" data-id="3" data-slug="resume"><a href="#resume"
+                        class="fa fa-graduation-cap tooltip-menu" title="Mon parcours"> Mon parcours</a>
+                </li>
+                <!-- PAGE 4 LINK -->
+                <li class="links-to-floor-li" data-id="4" data-slug="portfolio"><a href="#portfolio"
+                        class="fa fa-briefcase tooltip-menu" title="Mes réalisations">Mes réalisations</a>
+                </li>
+                <!-- PAGE 5 LINK -->
+                <li class="links-to-floor-li" data-id="5" data-slug="contact"><a href="#contact"
+                        class="fa fa-send tooltip-menu" title="Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- LEFT SLIDER -->
+    <div class="cv-left-slider">
+        <div id="cv-left-slider">
+            <!-- 1. SLIDE -->
             <div>
-                <p class="font-size-30 mt-0 font-bold">SALUT, JE M'APPELLE <b>MEBALE NOEL</b></p>
-                <hr class="hr-middle">
-                <p>
-                    je suis un jeune gabonais qui s'est toujours battu pour avoir une personne dans le monde du developpement d'application. Même quand tout n'était pas en ma faveur
+                <img src="images/photos/IMG_2449-min.jpg" style="top:0;" alt="mebale noel">
+                <div id="home-slide-title">
+                    <span>NOEL</span>
+                </div>
+            </div>
+            <!-- 2. SLIDE -->
+            <img src="images/photos/IMG_2452-min.jpg" alt="">
+            <!-- 3. SLIDE -->
+            <img src="images/photos/me.jpg" alt="">
+            <!-- 4. SLIDE -->
+            <img src="images/photos/work.jpeg" alt="web development">
+            <!-- 5. SLIDE -->
+            <div>
+                <!-- GOOGLE MAP -->
+                <div class="google-map-container">
+                    <div id="mapid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PAGES -->
+    <div id="ascensorBuilding">
+        <!-- PAGE 1 -->
+        <section class="floor floor-1">
+            <div id="home-image">
+                <div id="home-title">
+                    <h1><span class="mobile-title">NOEL</span><span>MEBALE</span></h1>
+                    <p>Développeur web et mobile</p>
+                </div>
+                <!-- SOCIAL ICONS -->
+                <div id="cv-home-social-bar-container">
+                    <nav id="cv-home-social-bar">
+                        <ul>
+                            <li>
+                                <a href="#" class="fa fa-facebook-f tooltip-social" title="FACEBOOK">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus tooltip-social" title="GOOGLE PLUS">Google Plus</a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin tooltip-social" title="LINKEDIN">Linkedin</a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-github tooltip-social" title="GITHUB">Github</a>
+                            </li>
+                            <li>
+                                <a href="tel:+24106764376" class="fa fa-whatsapp tooltip-social" title="WHATSAPP">Whatsapp</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE 2 -->
+        <section class="floor floor-2">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <!-- <img src="images/photos/img3-small.jpg" alt="" /> -->
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+                <h2 class="border">A propos</h2>
+                <p>Je suis un jeune gabonais passioné par l'informatique depuis la classe de seconde. Je suis toujours disponible pour faire partie d'un projet de développement informatique. De plus, Je sais m'adapter et je suis toujours prêt à donner de mon temps pour partager ma connaissance à ceux qui le veulent bien.</p>
+                <!-- TABLE -->
+                <ul class="cv-table">
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-user"></i>Date de naissance</div>
+                        <div class="cv-table-right">12 juillet 1993</div>
+                    </li>
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-language"></i>Langues </div>
+                        <div class="cv-table-right">Français, anglais (niveau intermédiaire)</div>
+                    </li>
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-futbol-o"></i>Hobbies</div>
+                        <div class="cv-table-right">Faire des veilles, les animés, jogging</div>
+                    </li>
+                </ul>
+                <a href="#contact" class="cv-button primary go-to-floor" data-id="5" data-slug="contact">ME CONTACTER</a>
+                <a href="#" class="cv-button">TELECHARGER CV</a>
+            </div>
+        </section>
+        <!-- PAGE 3 -->
+        <section class="floor floor-3">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <img src="images/photos/img4-small.jpg" alt="" />
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+                <h2 class="border">EXPERIENCE</h2>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Stagiaire à Ogooué Labs</h5>
+                        <p>en juin 2018</p>
+                    </div>
+                    <p>J'ai été emmené à faire partie du departement innovation afin de faire valoir ma modeste compétence dans le domaine du développement.</p>
+                </div>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Bricorama</h5>
+                        <p>2015 et 2017</p>
+                    </div>
+                    <p>En tant que travail saisonnier. J'ai été emmené à réaliser certaines tâches, beaucoup plus dans le domaine de la vente</p>
+                </div>
+                <hr />
+                <h2 class="border">PARCOURS SCOLAIRE</h2>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Ecole 241</h5>
+                        <p>2018 - 2019</p>
+                    </div>
+                    <p>J'ai pu découvrir une nouvelle façon d'apprendre. Cette école m'a permis d'avoir plus confiance en moi car elle nous met toujours dans des situations ou l'expression "se surpasser" est le maitre mot. C'est une école spécialisé dans le numérique, dans laquelle j'ai été admi en tant que developpeur web.</p>
+                </div>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Institut Superieur des technologies</h5>
+                        <p>2016 - 2018</p>
+                    </div>
+                    <p>J'ai passé ma licence en informatique à l'IST, plus précisement dans le domaine des bases de données, réseaux et web.</p>
+                </div>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Institut des Techniques Avancées</h5>
+                        <p>2013 - 2015</p>
+                    </div>
+                    <p>J'ai passé deux ans dans cet établisement dans le domaine de l'informatique de gestion. A part tous les aspects liés à l'informatique, on était ammené à suivre, la majeur partie du temps, des cours liés à la gestion (comptabilité, management, etc.)</p>
+                </div>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Université OMAR BONGO</h5>
+                        <p>2010 - 2011</p>
+                    </div>
+                    <p>J'ai passé un an au département d'anglais. J'ai pu m'améliorer en anglais et savoir tenir une conversation simple dans la langue de Shakespear</p>
+                </div>
+                <hr />
+                <h2 class="border">COMPETENCES</h2>
+                <p>La barres ci-dessous vous montre mon niveau de compétence dans différents domaines
                 </p>
-            </div>
-            <!-- mes informations -->
-            <div>
-                <img src="assets/img/noel-cut.jpg" class="d-block pic" id="my-pic" alt="my picture">
-                <div>
-                    <h3 class="mt-0">Informations personelles</h3>
-
-                    <hr class="hr-left">
-                    <table class="line-h-50">
-                        <tr>
-                            <td class="font-bold">Nom</td>
-                            <td class="font-bold">:</td>
-                            <td class="pl-50">MEBALE</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Prénom</td>
-                            <td class="font-bold">:</td>
-                            <td class="pl-50">NOEL</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Adresse</td>
-                            <td class="font-bold">:</td>
-                            <td class="pl-50">Akanda, GABON</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Téléphone</td>
-                            <td class="font-bold">:</td>
-                            <td class="pl-50">+241 06 76 43 76</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Email</td>
-                            <td class="font-bold">:</td>
-                            <td class="pl-50">noelmeb12@gmail.com</td>
-                        </tr>
-                    </table>
+                <!-- SKILL BARS -->
+                <div class="skills">
+                    <div class="skillbar" data-percent="80%">
+                        <div class="skillbar-title"><span>HTML5</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">80%</div>
+                    </div>
+                    <div class="skillbar" data-percent="70%">
+                        <div class="skillbar-title"><span>CSS3</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">70%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>jQuery</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">60%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>LARAVEL</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">60%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>UML</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">50%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>Méthode Agile (scrum)</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">50%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>ADOBE XD</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">70%</div>
+                    </div>
+                    
+                    <div class="skillbar" data-percent="40%">
+                        <div class="skillbar-title"><span>Wordpress</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">40%</div>
+                    </div>
+                    <div class="skillbar" data-percent="50%">
+                        <div class="skillbar-title"><span>Leadership</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">50%</div>
+                    </div>
+                    <div class="skillbar" data-percent="80%">
+                        <div class="skillbar-title"><span>Travail en équipe</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">80%</div>
+                    </div>
+                    <!-- End Skill Bars -->
                 </div>
-
-                <div>
-                    <h3 class="mt-0">Mon CV</h3>
-                    <hr class="hr-left">
-                    <p>
-                        Je suis une personne disponible, toujours prête à réaliser des projets allant dans le sens de l'amélioration de mes compétences, ceci afin de me permettre de toujours donner la meilleure version de moi-même.
-                    </p>
-                    <a href="#" class="btn mt-30 d-inline-block">télécharger cv</a>
-                </div>
-                <p class="title font-bold">A PROPOS DE MOI</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- section des compétences -->
-    <section class="bg-white">
-        <!-- le titre à gauche -->
-        <div class="left-side pt-100 ">
-            <span>#02</span>
-            <h2>mes compétences</h2>
-        </div>
-        <!-- le contenu principal -->
-        <div class="right-side pt-100 container">
-            <!-- haut du contenu principal -->
-            <div>
-                <p class="font-size-20 font-bold text-uppercase">
-                    je suis un developpeur web et mobile  à l'affût des nouveaux défis et ma mission consiste à
+                <hr />
+                <h2 class="border">CONCOURS</h2>
+                <p>J'ai participé à quelques concours qui m'ont permis de découvrir plein de chose liées à mon domaine d'activité.'
                 </p>
-                <p class="font-size-30 mt-0 font-bold text-uppercase">créer les meilleures applications du marché</p>
-                <hr class="hr-middle">
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Hackaton E-Gabon</h5>
+                        <p>en 2018</p>
+                    </div>
+                    <p>Le but consistait d'apporter une solution numérique pour pallier les problèmes liés au domaine de la santé au Gabon. Et nous avions proposé, mon groupe et moi, une solution de rendez-vous en ligne.</p>
+                </div>
+                <div class="cv-resume-box">
+                    <div class="cv-resume-title">
+                        <h5>Space Apps Challenge</h5>
+                        <p>en 2018</p>
+                    </div>
+                    <p>Le but consistait, dans ce hackaton de proposer une solution qui cadrait avec les différents thèmes imposé par la NASA. Nous avons proposé un site informant toute personne interessée des prochains lancement de fusée</p>
+                </div>
             </div>
-            <!-- mes informations -->
-            <div>
-                <div class="skool">
-                    <span class="font-size-45"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
-                    <h3 class="text-none">Parcours scolaire</h3>
-                    <hr class="hr-left">
-                    <p>
-                        <strong>Lycée National Léon Mba</strong><br>
-                        Brevet d'étude premier cycle
-                    </p>
-                    <p>
-                        <strong>Lycée National Léon Mba</strong><br>
-                        Bacchalauréat A1
-                    </p>
-                    <p>
-                        <strong>Institut des Sciences et Technologies</strong><br>
-                        Licence Informatique
-                    </p>
-                    <p>
-                        <strong>Ecole 241</strong><br>
-                        Certificat de reussite en developpement web
-                    </p>
-                </div>
-                <div class="d-none">
-                    <span class="font-size-45"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
-                    <h3 class="text-none">Expérience</h3>
-                    <hr class="hr-left">
-                </div>
+        </section>
+        <!-- PAGE 4 -->
+        <section class="floor floor-4">
+            <!-- THIS IMAGE WILL BE DISPLAYED ONLY ON MOBILE MODE ( 1024PX AND BELOW ) -->
+            <div class="img-mobile-only">
+                <img src="images/photos/img5-small.jpg" alt="" />
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+                <h2 class="border">PORTFOLIO</h2>
+                <!-- PORTFOLIO FILTERS -->
+                <!-- <ul id="cv-portfolio-filter" class="cvfilters">
+                    <li data-filter="all" class="gridactive">All</li>
+                    <li data-filter="cat1">Category 1</li>
+                    <li data-filter="cat2">Category 2</li>
+                </ul> -->
+                <div class="clear"></div>
+                <!-- PORTFOLIO GRID -->
+                <ul id="cv-portfolio" class="cvgrid">
+                    <li data-filter-class='["all","cat2"]'>
+                        <figure>
+                            <a id="gallery1" href="#" class="cvgrid-img">
+                                <img src="images/photos/gaboniseme.png" alt="" />
+                            </a>
+                            <figcaption>
+                                <div class="cvgrid-title">Gabonise me</div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li data-filter-class='["all","cat1","cat2"]'>
+                        <figure>
+                            <a id="gallery2" href="#" class="openlightbox cvgrid-video">
+                                <img src="images/photos/jobconnect.png" alt="site de jobconnect" />
+                            </a>
+                            <figcaption>
+                                <div class="cvgrid-title">Job Connect</div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li data-filter-class='["all","cat1"]'>
+                        <figure>
+                            <a id="gallery3" href="#" class="openlightbox cvgrid-img">
+                                <img src="images/photos/acte-afrique.PNG" alt="site de acte afrique" />
+                            </a>
+                            <figcaption>
+                                <div class="cvgrid-title">Acte Afrique</div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li data-filter-class='["all","cat2"]'>
+                        <figure>
+                            <a id="gallery4" href="#" class="cvgrid-img">
+                                <img src="images/photos/bouc.png" alt="Defis personnel" />
+                            </a>
+                            <figcaption>
+                                <div class="cvgrid-title">Défis personnel</div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </section>
+        <!-- PAGE 5 -->
+        <section class="floor floor-5">
+            <!-- MOBILE GOOGLE MAP -->
+            <div class="mobile-map-container">
+                <div id="mobile-map"></div>
+            </div>
+            <!-- PAGE CONTENT -->
+            <div class="cv-page-content">
+                <h2 class="border">CONTACT</h2>
+                <p>Pour plus d'information sur moi vous pouvez me contacter via ces différent mode de communication</p>
+                <!-- TABLE -->
+                <ul class="cv-table">
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-phone-square"></i>Téléphone</div>
+                        <div class="cv-table-right"><a href="tel:++24106764376">+241 06 76 43 76</a></div>
+                    </li>
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-envelope"></i>E-mail</div>
+                        <div class="cv-table-right"><a href="mailto:noelmeb12@gmail.com">noelmeb12@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cv-table-left"><i class="cv-icon fa fa-map"></i>Adresse</div>
+                        <div class="cv-table-right">Okala, dans la commune d'Akanda au Gabon</div>
+                    </li>
+                </ul>
+                <hr />
+                <h2 class="border">Contactez-moi</h2>
+                <p>Vous pouvez m'envoyer un mai. Je me ferai un plaisir de vous repondre dans les plus brefs délais.</p>
+                <!-- CONTACT FORM -->
+                <form class="form-box" action="http://divergent.wp4life.com/processform.php" method="post">
+                    <label>Nom et prénom :</label>
+                    <input type="text" name="senderName" id="senderName" required="required" maxlength="50" />
+                    <label>Numero de téléphone :</label>
+                    <input type="text" name="phoneNumber" id="phoneNumber" required="required" maxlength="50" />
+                    <label>Email :</label>
+                    <input type="email" name="senderEmail" id="senderEmail" required="required" maxlength="50" />
+                    <label>Message :</label>
+                    <textarea name="message" id="message" required="required"></textarea>
+                    <input type="submit" id="sendMessage" name="sendMessage" class="cv-button primary"
+                        value="Envoyer" />
+                </form>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="cv-credits">
+                Copyright <a href="#">Egemenerd</a> - All rights reserved
+            </div>
+            <!-- BACK TO TOP BUTTON -->
+            <div id="cv-back-to-top" class="tooltip-gototop" title="Go to top"></div>
+        </footer>
+    </div>
 
-                <div class="self">
-                    <div>
-                        <p>HTML</p>
-                        <div class="bars"><span class="load-90"></span></div>
-                        <p class="text-right">90%</p>
-                    </div>
-                    <div>
-                        <p>CSS</p>
-                        <div class="bars"><span class="load-60"></span></div>
-                        <p class="text-right">60%</p>
-                    </div>
-                    <div>
-                        <p>JAVASCRIPT</p>
-                        <div class="bars"><span class="load-50"></span></div>
-                        <p class="text-right">50%</p>
-                    </div>
-                    <div>
-                        <p>PHP</p>
-                        <div class="bars"><span class="load-50"></span></div>
-                        <p class="text-right">50%</p>
-                    </div>
-                    <div>
-                        <p>ADOBE XD</p>
-                        <div class="bars"><span class="load-50"></span></div>
-                        <p class="text-right">50%</p>
-                    </div>
-
-                </div>
-                <p class="title font-bold">MES COMPETENCES</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- section des réalisations -->
-    <section class="bg-pink">
-        <!-- le titre à gauche -->
-        <div class="left-side pt-100">
-            <span>#03</span>
-            <h2>mes réalisations</h2>
-        </div>
-        <!-- le contenu principal -->
-        <div class="right-side pt-100 container">
-            <!-- haut du contenu principal -->
-            <div>
-                <p class="font-size-30 mt-0 font-bold text-uppercase">quelques unes de mes réalisations</p>
-                <hr class="hr-middle">
-            </div>
-            <div class="realisations">
-                <div class="box">
-                    <img src="assets/img/agri-collecte.png" alt="agricollect">
-                    <div class="content text-center">
-                        <span>Agri-collect de Keva Initiative</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="assets/img/bouc.png" alt="le bouc">
-                    <div class="content text-center">
-                        <span>Intégration du bouc</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="assets/img/deshimag.png" alt="deshimag">
-                    <div class="content text-center">
-                        <span>Intégration du Deshimag</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="assets/img/jobconnect.png" alt="joconnect">
-                    <div class="content text-center">
-                        <span>Application Jobconnect</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="assets/img/myga.png" alt="myga">
-                    <div class="content text-center">
-                        <span>Refonte de Myga</span>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="assets/img/gaboniseme.png" alt="gaboniseme">
-                    <div class="content text-center">
-                        <span>Site web Gabonise-me</span>
-                    </div>
-                </div>
-                <p class="title font-bold text-uppercase mb-100">mes réalisations</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Mes contacts -->
-    <section class="bg-indigo">
-        <!-- le titre à gauche -->
-        <div class="left-side">
-            <span class="pt-100">#04</span>
-            <h2>mes contacts</h2>
-        </div>
-        <!-- le contenu principal -->
-        <div class="right-side pt-100 container">
-            <!-- haut du contenu principal -->
-            <div id="contact">
-                <p class="font-size-30 mt-0 font-bold text-uppercase">informations pour me contacter</p>
-                <hr class="hr-middle">
-            </div>
-            <!-- formulaire de contact -->
-            <div id="form-map">
-                <div id="mapid"></div>
-                <div class="form-space">
-                    <p class="mt-0 text-uppercase font-bold font-size-30 mb-20">
-                        Laissez moi un message
-                    </p>
-                    <hr class="hr-bold mb-50">
-                    <form action="#">
-                        <p class="pb-10">
-                            <input type="text" placeholder="Nom" class="form-control">
-                        </p>
-                        <p class="pb-10">
-                            <input type="email" placeholder="Email" class="form-control">
-                        </p>
-                        <p class="pb-10">
-                            <input type="tel" placeholder="Téléphone" class="form-control">
-                        </p>
-                        <p class="pb-10">
-                            <textarea class="form-control" cols="30" rows="10" placeholder="Message"
-                                style="resize:none;"></textarea>
-                        </p>
-                        <input type="submit" class="btn-white text-uppercase font-bold" value="Envoyer">
-                    </form>
-                </div>
-                <p class="title font-bold text-uppercase">mes contacts</p>
-            </div>
-        </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
-    <script src="assets/js/myscript.js"></script>
+    <!-- MAIN JS FILES -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ascensor.min.js"></script>
+    <script type="text/javascript" src="js/nerveslider.min.js"></script>
+    <!-- BACKSTRETCH (HOMEPAGE RIGHT SIDE BG IMAGE) -->
+    <script type="text/javascript" src="js/backstretch.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            "use strict";
+            jQuery('#home-image').backstretch("images/photos/DSC_0003.jpg");
+        });
+    </script>
+    <!-- PORTFOLIO -->
+    <script type="text/javascript" src="js/wookmark.js"></script>
+    <script type="text/javascript" src="js/portfolio-trigger.js"></script>
+    <!-- TOOLTIPS -->
+    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    <!-- TESTIMONIALS -->
+    <script type="text/javascript" src="js/quovolver.js"></script>
+    <!-- SIDEBAR SCROLLBAR -->
+    <script type="text/javascript" src="js/scrollbar.js"></script>
+    <!-- LIGHTGALLERY -->
+    <script type="text/javascript" src="js/lightgallery.js"></script>
+    <script type="text/javascript" src="js/galleries.js"></script>
+    <!-- GOOGLE MAP -->
+    <script type="text/javascript" src="js/googlemap.js"></script>
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="js/home-custom.js"></script>
 </body>
+
+
+<!-- Mirrored from divergent.wp4life.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 May 2019 10:58:11 GMT -->
 
 </html>

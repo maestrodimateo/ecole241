@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200i,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    <title>Portfolio-mebale-noel</title>
+</head>
+
+<body>
+    <header>
+        <div class="burger">
+            <a href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </div>
+        <span class="logo"><img src="assets/img/logo.png" width="100" alt="logo"></span>
+        <!-- le contenu du background -->
+        <div class="bg-inner">
+            <h1>BIENVENUE DANS MON ENTRE</h1>
+            <q>Les clients ne vous mesurent pas à quel point vous avez essayé, ils vous mesurent sur ce que vous
+                livrez.</q>
+            <br> <small>- Steve Jobs</small>
+            <a href="#contact" class="btn">me contacter</a>
+        </div>
+
+        <a href="#personal"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+    </header>
+
+    <!-- section de presentation personnelle -->
+    <section id="personal" class="perso">
+        <!-- le titre à gauche -->
+        <div class="left-side pt-100">
+            <span>#01</span>
+            <h2>à propos de moi</h2>
+        </div>
+        <!-- le contenu principal -->
+        <div class="right-side pt-100 container">
+            <!-- haut du contenu principal -->
+            <div>
+                <p class="font-size-30 mt-0 font-bold">SALUT, JE M'APPELLE <b>MEBALE NOEL</b></p>
+                <hr class="hr-middle">
+                <p>
+                    je suis un jeune gabonais qui s'est toujours battu pour avoir une personne dans le monde du developpement d'application. Même quand tout n'était pas en ma faveur
+                </p>
+            </div>
+            <!-- mes informations -->
+            <div>
+                <img src="assets/img/noel-cut.jpg" class="d-block pic" id="my-pic" alt="my picture">
+                <div>
+                    <h3 class="mt-0">Informations personelles</h3>
+
+                    <hr class="hr-left">
+                    <table class="line-h-50">
+                        <tr>
+                            <td class="font-bold">Nom</td>
+                            <td class="font-bold">:</td>
+                            <td class="pl-50">MEBALE</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Prénom</td>
+                            <td class="font-bold">:</td>
+                            <td class="pl-50">NOEL</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Adresse</td>
+                            <td class="font-bold">:</td>
+                            <td class="pl-50">Akanda, GABON</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Téléphone</td>
+                            <td class="font-bold">:</td>
+                            <td class="pl-50">+241 06 76 43 76</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Email</td>
+                            <td class="font-bold">:</td>
+                            <td class="pl-50">noelmeb12@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="mt-0">Mon CV</h3>
+                    <hr class="hr-left">
+                    <p>
+                        Je suis une personne disponible, toujours prête à réaliser des projets allant dans le sens de l'amélioration de mes compétences, ceci afin de me permettre de toujours donner la meilleure version de moi-même.
+                    </p>
+                    <a href="#" class="btn mt-30 d-inline-block">télécharger cv</a>
+                </div>
+                <p class="title font-bold">A PROPOS DE MOI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section des compétences -->
+    <section class="bg-white">
+        <!-- le titre à gauche -->
+        <div class="left-side pt-100 ">
+            <span>#02</span>
+            <h2>mes compétences</h2>
+        </div>
+        <!-- le contenu principal -->
+        <div class="right-side pt-100 container">
+            <!-- haut du contenu principal -->
+            <div>
+                <p class="font-size-20 font-bold text-uppercase">
+                    je suis un developpeur web et mobile  à l'affût des nouveaux défis et ma mission consiste à
+                </p>
+                <p class="font-size-30 mt-0 font-bold text-uppercase">créer les meilleures applications du marché</p>
+                <hr class="hr-middle">
+            </div>
+            <!-- mes informations -->
+            <div>
+                <div class="skool">
+                    <span class="font-size-45"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+                    <h3 class="text-none">Parcours scolaire</h3>
+                    <hr class="hr-left">
+                    <p>
+                        <strong>Lycée National Léon Mba</strong><br>
+                        Brevet d'étude premier cycle
+                    </p>
+                    <p>
+                        <strong>Lycée National Léon Mba</strong><br>
+                        Bacchalauréat A1
+                    </p>
+                    <p>
+                        <strong>Institut des Sciences et Technologies</strong><br>
+                        Licence Informatique
+                    </p>
+                    <p>
+                        <strong>Ecole 241</strong><br>
+                        Certificat de reussite en developpement web
+                    </p>
+                </div>
+                <div class="d-none">
+                    <span class="font-size-45"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                    <h3 class="text-none">Expérience</h3>
+                    <hr class="hr-left">
+                </div>
+
+                <div class="self">
+                    <div>
+                        <p>HTML</p>
+                        <div class="bars"><span class="load-90"></span></div>
+                        <p class="text-right">90%</p>
+                    </div>
+                    <div>
+                        <p>CSS</p>
+                        <div class="bars"><span class="load-60"></span></div>
+                        <p class="text-right">60%</p>
+                    </div>
+                    <div>
+                        <p>JAVASCRIPT</p>
+                        <div class="bars"><span class="load-50"></span></div>
+                        <p class="text-right">50%</p>
+                    </div>
+                    <div>
+                        <p>PHP</p>
+                        <div class="bars"><span class="load-50"></span></div>
+                        <p class="text-right">50%</p>
+                    </div>
+                    <div>
+                        <p>ADOBE XD</p>
+                        <div class="bars"><span class="load-50"></span></div>
+                        <p class="text-right">50%</p>
+                    </div>
+
+                </div>
+                <p class="title font-bold">MES COMPETENCES</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section des réalisations -->
+    <section class="bg-pink">
+        <!-- le titre à gauche -->
+        <div class="left-side pt-100">
+            <span>#03</span>
+            <h2>mes réalisations</h2>
+        </div>
+        <!-- le contenu principal -->
+        <div class="right-side pt-100 container">
+            <!-- haut du contenu principal -->
+            <div>
+                <p class="font-size-30 mt-0 font-bold text-uppercase">quelques unes de mes réalisations</p>
+                <hr class="hr-middle">
+            </div>
+            <div class="realisations">
+                <div class="box">
+                    <img src="assets/img/agri-collecte.png" alt="agricollect">
+                    <div class="content text-center">
+                        <span>Agri-collect de Keva Initiative</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/bouc.png" alt="le bouc">
+                    <div class="content text-center">
+                        <span>Intégration du bouc</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/deshimag.png" alt="deshimag">
+                    <div class="content text-center">
+                        <span>Intégration du Deshimag</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/jobconnect.png" alt="joconnect">
+                    <div class="content text-center">
+                        <span>Application Jobconnect</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/myga.png" alt="myga">
+                    <div class="content text-center">
+                        <span>Refonte de Myga</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/img/gaboniseme.png" alt="gaboniseme">
+                    <div class="content text-center">
+                        <span>Site web Gabonise-me</span>
+                    </div>
+                </div>
+                <p class="title font-bold text-uppercase mb-100">mes réalisations</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mes contacts -->
+    <section class="bg-indigo">
+        <!-- le titre à gauche -->
+        <div class="left-side">
+            <span class="pt-100">#04</span>
+            <h2>mes contacts</h2>
+        </div>
+        <!-- le contenu principal -->
+        <div class="right-side pt-100 container">
+            <!-- haut du contenu principal -->
+            <div id="contact">
+                <p class="font-size-30 mt-0 font-bold text-uppercase">informations pour me contacter</p>
+                <hr class="hr-middle">
+            </div>
+            <!-- formulaire de contact -->
+            <div id="form-map">
+                <div id="mapid"></div>
+                <div class="form-space">
+                    <p class="mt-0 text-uppercase font-bold font-size-30 mb-20">
+                        Laissez moi un message
+                    </p>
+                    <hr class="hr-bold mb-50">
+                    <form action="#">
+                        <p class="pb-10">
+                            <input type="text" placeholder="Nom" class="form-control">
+                        </p>
+                        <p class="pb-10">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </p>
+                        <p class="pb-10">
+                            <input type="tel" placeholder="Téléphone" class="form-control">
+                        </p>
+                        <p class="pb-10">
+                            <textarea class="form-control" cols="30" rows="10" placeholder="Message"
+                                style="resize:none;"></textarea>
+                        </p>
+                        <input type="submit" class="btn-white text-uppercase font-bold" value="Envoyer">
+                    </form>
+                </div>
+                <p class="title font-bold text-uppercase">mes contacts</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="assets/js/myscript.js"></script>
+</body>
+
+</html>

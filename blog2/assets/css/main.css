@@ -98,6 +98,54 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body{
+  background-color: #F2F1F1 !important;
+  font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4,
+nav *, .date, .tags,
+.twitter-color, .facebook-color,
+.btn-green, .logo
+{font-family:'Patua One', cursive;}
+
+.bg-green, .btn-green{background-color: #009688;}
+.btn-green{
+  border: none;
+  width: 48%;
+  padding: 10px 5px;
+}
+
+.text-green{color: #009688}
+
+p{font-size: 1.2em;}
+
+aside p, .fonts-8{font-size: 0.8em;}
+.comment{font-size: 0.9em;}
+.commented-at{font-size: 0.8em;font-style: italic}
+.border-top{
+  border-top:solid 1px rgb(0, 0, 0, .1) !important;
+}
+.fonts-18{font-size: 1.8em;}
+.fonts-25{font-size: 2.5em;}
+.fonts-20{font-size: 2em;}
+.w-80{max-width: 80%;}
+.h-30{height: 30%;}
+.h-80{height: 800px;}
+.zindex{z-index: 1;}
+.twitter-color{background-color: #03A9F4}
+.facebook-color{background-color: #3F51B5}
+.w-93{width: 93%}
+.tags{
+  background-color: #009688;
+  color: rgba(255, 255, 255, .7);
+  padding: 5px 5px;
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -187,8 +235,13 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
+.w-93{width: 100%;}
+  aside{
+    width: 95%;
+    margin: 30px auto 0;
+  }
 }
 
 @media print,

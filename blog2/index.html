@@ -43,6 +43,7 @@
 	<![endif]-->
 
 	<div class="container">
+		<p id="meteo"></p>
 		<header class="navbar navbar-expand-lg navbar-light bg-white mt-5 py-4 px-3 shadow  w-93">
 			<h1><a class="navbar-brand" href="#" title="gameblog">GAMEBLOG</a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
@@ -224,25 +225,36 @@
 								<div class="col-md-8">
 									<div class="titles">
 										<time datetime="2019-01-24">24 janvier 2019</time>
-										<p class="font-weight-bold">Le retour du mortal kombat</p>
+										<p  class="font-weight-bold">Le retour du mortal kombat</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div>
 							<h4 class="text-center border-top py-2">Abonnes toi à notre newsletter</h4>
-							<form action="#" method="post">
+							<form action="#" method="post" name="newsletter" autocomplete="off">
 								<div class="form-group">
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input 
+										type="email" class="form-control" 
+										name="email" placeholder="Email"  required>
+										
+										<p class="d-none text-center"></p>
 								</div>
 								<div class="form-group text-center btn-block">
 									<button type="submit" name="ok" class="btn-green rounded text-white d-block w-100">S'abonner</button>
 								</div>
 							</form>
+							<div class="d-flex justify-content-center">
+								<span class="sr-only">Loading...</span>
+								<div class="form-group text-center btn-block d-none" id="loading">
+									<div class="spinner-grow text-info"  role="status" >
+								</div>
+							</div>
+							<p id="message"></p>
 						</div>
 					</div>
 					<div>
-					<div class="">
+					<div>
 						<h4 class="text-center border-top pt-2">Tags</h4>
 						<span class="tags rounded">FPS</span>
 						<span class="tags rounded">FIGHT</span>
@@ -291,6 +303,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/main.js"></script>
 

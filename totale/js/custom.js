@@ -37,6 +37,4 @@ $(function(){
 
 	// tabs
 	$('ul.tabs').tabs(); 
-  
-
 });

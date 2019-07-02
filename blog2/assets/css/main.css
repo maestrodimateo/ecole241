@@ -146,7 +146,12 @@ aside p, .fonts-8{font-size: 0.8em;}
 }
 .l-height-100{line-height: 100px;}
 
-
+input[type='email']:valid{
+  border-color: green;
+}
+input[type='email']:invalid{
+  border-color: red;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

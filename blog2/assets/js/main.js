@@ -4,9 +4,9 @@ window.onload = function () {
     // les validations
     const validation = {
         email: /^[a-z]+(\d+)?[@][a-z]+\.[a-z]{2,4}/,
-        nom: /^[A-Z][a-z]+([a-z -]+)?/,
+        nom: /^[A-Z][A-Z -]+[A-Z]$/,
         prenom: /^[A-Z][a-z]+([a-z -]+)?/,
-        telephone: /^[0][0-9]{8,9}$/
+        telephone: /^[0][0-9]{7,9}$/
     }
 
     // les elements
@@ -93,6 +93,7 @@ window.onload = function () {
             }
         },
         formSubmit:function (form) {
+
             // Faire disparaitre le formulaire et apparaitre le loader
             form.classList.add('d-none');
             loading.classList.replace('d-none', 'd-block');
@@ -133,7 +134,7 @@ window.onload = function () {
         nomvalidation: function () {
             let elt = this.nextElementSibling;
             if (!validation.nom.test(this.value)) {
-                contact.errors("Votre nom doit commencer par une lettre majuscule", elt, this);
+                contact.errors("Votre nom doit être en majuscule", elt, this);
             } else {
                 contact.success(elt, this);
             }

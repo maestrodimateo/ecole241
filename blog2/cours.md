@@ -27,3 +27,4 @@ Dans ce code on effectue une requete GET
 
 * async permet de signifier qu'une fonction est asynchrone
 * await permet de dire qu'une fonction ne sera pas execute tant que celle sur laquelle se trouve `await` ne l'a pas fait 
+* Ce que renvoie ``document.querySelectorAll()` n'est pas un tableau d'élèments mais une liste de noeuds.

@@ -29,8 +29,9 @@
 		<p class="browserupgrade">Vous utiliser une<strong> ancienne version</strong> de votre navigateur. S'il vous plait, télécharger sur <a href="https://browsehappy.com/">pour le mettre à jour</a> et améliorer votre expérience et votre sécurité.</p>
 	<![endif]-->
 
-	<div class="container">
-		<header class="navbar navbar-expand-lg navbar-light bg-white mt-5 py-4 px-3 shadow  w-93">
+	<div class="container" id="app" data-id='contact'>
+		<span id="meteo" class="badge badge-dark text-light mt-5 d-inline-block"></span>
+		<header class="navbar navbar-expand-lg navbar-light mt-2 bg-white py-4 px-3 shadow  w-93">
 			<h1><a class="navbar-brand" href="index.html">GAMEBLOG</a></h1>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -68,25 +69,29 @@
 						<div class="form-group">
 							<div class="row">
 								<div class="col-md-6 col-sm-12 mb-2">
-									<input type="text" class="form-control" id="nom" placeholder="Nom">
+									<input type="text" class="form-control" name="nom" placeholder="Nom" >
+									<small class="message d-none"></small>
 								</div>
 								<div class="col-md-6 col-sm-12">
-									<input type="text" class="form-control" id="prenom" placeholder="Prénom">
+									<input type="text" class="form-control" name="prenom" placeholder="Prénom">
+									<small class="message d-none"></small>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="row">
 								<div class="col-md-6 col-sm-12 mb-2">
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input type="email" class="form-control" name="email" placeholder="Email">
+									<small class="message d-none"></small>
 								</div>
 								<div class="col-md-6 col-sm-12">
-									<input type="tel" class="form-control" id="tel" placeholder="Téléphone">
+									<input type="tel" class="form-control" name="tel" placeholder="Téléphone">
+									<small class="message d-none"></small>
 								</div>
 							</div>
 							</div>
 						<div class="form-group">
-							<textarea class="form-control" placeholder="Ecrivez votre message ici" id="commentaire" rows="10"></textarea>
+							<textarea class="form-control" placeholder="Ecrivez votre message ici" name="commentaire" rows="10"></textarea>
 						</div>
 						<div class="form-group">
 							<button type="submit" name="ok" class="btn-green rounded text-white">Envoyer</button>

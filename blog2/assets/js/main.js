@@ -4,7 +4,7 @@ window.onload = function () {
     // les validations
     const validation = {
         email: /^[a-z]+(\d+)?[@][a-z]+\.[a-z]{2,4}/,
-        nom: /^[A-Z][A-Z -]+[A-Z]$/,
+        nom: /^[A-Z]+([A-Z ]+)?[A-Z]$/,
         prenom: /^[A-Z][a-z]+([a-z -]+)?/,
         telephone: /^[0][0-9]{7,9}$/
     }

@@ -38,7 +38,7 @@ window.onload = function () {
             }
         },
 
-        // les fonctions
+        // Api de météo
         getWeather: async function() {
             try{
                 const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=libreville,ga&units=metric&lang=fr&appid=25498e1a0cf5b690e169f5c23e4ed8ee");
@@ -65,9 +65,9 @@ window.onload = function () {
  */
 
     // page d'accueil
-    accueil = {
-
-        run:function () { // la page d'accueil
+    const accueil = {
+        
+        run:function () {
             elements.form['email'].addEventListener('input', this.emailvalidation);
             elements.form.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -107,7 +107,7 @@ window.onload = function () {
     }
 
     // page de contact
-    contact = {
+    const contact = {
 
         run:function () {
             elements.formContact['email'].addEventListener('input', this.emailvalidation);
